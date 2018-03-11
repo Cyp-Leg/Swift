@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeVieswController: UIViewController {
 
     @IBAction func PilulierButton(_ sender: Any) {
     }
