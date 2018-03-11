@@ -10,6 +10,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBAction func PilulierButton(_ sender: Any) {
+    }
+    @IBAction func AgendaButton(_ sender: Any) {
+    }
+    @IBAction func CoachButton(_ sender: Any) {
+    }
+    
+    @IBAction func SymptomeButton(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

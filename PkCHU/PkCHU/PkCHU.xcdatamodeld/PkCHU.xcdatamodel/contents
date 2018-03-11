@@ -1,4 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="effectuer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="effectuer" inverseEntity="Patient" syncable="YES"/>
+    </entity>
+    <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
+        <attribute name="dose" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comprendre" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prise" inverseName="comprendre" inverseEntity="Prise" syncable="YES"/>
+        <relationship name="ordonner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ordonnance" inverseName="ordonner" inverseEntity="Ordonnance" syncable="YES"/>
+    </entity>
+    <entity name="Ordonnance" representedClassName="Ordonnance" syncable="YES" codeGenerationType="class">
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="ordonner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Medicament" inverseName="ordonner" inverseEntity="Medicament" syncable="YES"/>
+        <relationship name="prescrire" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Professionnel" inverseName="prescrire" inverseEntity="Professionnel" syncable="YES"/>
+    </entity>
+    <entity name="Patient" representedClassName="Patient" syncable="YES" codeGenerationType="class">
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="avoir" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rdv" inverseName="avoir" inverseEntity="Rdv" syncable="YES"/>
+        <relationship name="effectuer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="effectuer" inverseEntity="Activite" syncable="YES"/>
+        <relationship name="posseder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Symptome" inverseName="posseder" inverseEntity="Symptome" syncable="YES"/>
+    </entity>
+    <entity name="Prise" representedClassName="Prise" syncable="YES" codeGenerationType="class">
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heure" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quantite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recurrence" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comprendre" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicament" inverseName="comprendre" inverseEntity="Medicament" syncable="YES"/>
+    </entity>
+    <entity name="Professionnel" representedClassName="Professionnel" syncable="YES" codeGenerationType="class">
+        <attribute name="adresseCabinet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="concerner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rdv" inverseName="concerner" inverseEntity="Rdv" syncable="YES"/>
+        <relationship name="posseder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Specialite" inverseName="posseder" inverseEntity="Specialite" syncable="YES"/>
+        <relationship name="prescrire" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ordonnance" inverseName="prescrire" inverseEntity="Ordonnance" syncable="YES"/>
+    </entity>
+    <entity name="Rdv" representedClassName="Rdv" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="avoir" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoir" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="concerner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Professionnel" inverseName="concerner" inverseEntity="Professionnel" syncable="YES"/>
+    </entity>
+    <entity name="Specialite" representedClassName="Specialite" syncable="YES" codeGenerationType="class">
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="posseder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Professionnel" inverseName="posseder" inverseEntity="Professionnel" syncable="YES"/>
+    </entity>
+    <entity name="Symptome" representedClassName="Symptome" syncable="YES" codeGenerationType="class">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="posseder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Patient" inverseName="posseder" inverseEntity="Patient" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Patient" positionX="-101" positionY="60" width="128" height="118"/>
+        <element name="Activite" positionX="-162" positionY="-126" width="128" height="88"/>
+        <element name="Symptome" positionX="54" positionY="-120" width="128" height="88"/>
+        <element name="Rdv" positionX="90" positionY="132" width="128" height="103"/>
+        <element name="Professionnel" positionX="7" positionY="270" width="128" height="133"/>
+        <element name="Specialite" positionX="70" positionY="468" width="128" height="73"/>
+        <element name="Medicament" positionX="-324" positionY="245" width="128" height="103"/>
+        <element name="Ordonnance" positionX="-173" positionY="425" width="128" height="103"/>
+        <element name="Prise" positionX="-405" positionY="72" width="128" height="118"/>
+    </elements>
 </model>

@@ -103,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				87C5C76C2050623E006BDABA /* Controller */,
+				3D6EF0C120556C2600D743A8 /* Model */,
 				3D4F98FB2046A96700307C66 /* AppDelegate.swift */,
 				3D4F98FD2046A96700307C66 /* ViewController.swift */,
 				3D4F98FF2046A96700307C66 /* Main.storyboard */,
@@ -130,6 +131,13 @@
 				3D4F99202046A96800307C66 /* Info.plist */,
 			);
 			path = PkCHUUITests;
+			sourceTree = "<group>";
+		};
+		3D6EF0C120556C2600D743A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		87C5C76C2050623E006BDABA /* Controller */ = {

@@ -28,7 +28,7 @@
                                 <state key="normal" title="Mon Pilulier"/>
                                 <connections>
                                     <action selector="pilulierButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ykx-b1-cCW"/>
-                                    <segue destination="53l-Qt-H10" kind="show" id="atZ-E7-ofb"/>
+                                    <segue destination="53l-Qt-H10" kind="show" identifier="pilulierSegue" id="GLo-92-tkR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQm-Nd-Gon">
@@ -40,6 +40,7 @@
                                 </constraints>
                                 <state key="normal" title="Mon Agenda"/>
                                 <connections>
+                                    <action selector="AgendaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hkk-L1-lJL"/>
                                     <action selector="agendaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pht-Ol-xT2"/>
                                 </connections>
                             </button>
@@ -54,6 +55,7 @@
                                 </constraints>
                                 <state key="normal" title="Coach Sportif"/>
                                 <connections>
+                                    <action selector="CoachButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDm-ra-ycF"/>
                                     <action selector="coachButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QcT-TO-dHr"/>
                                 </connections>
                             </button>
@@ -70,6 +72,7 @@
                                 </constraints>
                                 <state key="normal" title="Mes Symptômes"/>
                                 <connections>
+                                    <action selector="SymptomeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vae-nZ-ML9"/>
                                     <action selector="symptButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BuE-aS-DJz"/>
                                 </connections>
                             </button>
@@ -100,7 +103,7 @@
         <!--View Controller-->
         <scene sceneID="LDR-ka-Kdf">
             <objects>
-                <viewController id="53l-Qt-H10" sceneMemberID="viewController">
+                <viewController id="53l-Qt-H10" customClass="ViewController" customModule="PkCHU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XnX-jP-mRS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +111,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGG-iq-EZM">
                                 <rect key="frame" x="166" y="104" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="ehg-O6-Lpn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="ehg-O6-Lpn"/>
                                     <constraint firstAttribute="height" constant="21" id="sgY-5A-axw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
