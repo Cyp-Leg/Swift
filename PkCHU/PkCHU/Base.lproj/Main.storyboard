@@ -27,7 +27,6 @@
                                 </constraints>
                                 <state key="normal" title="Mon Pilulier"/>
                                 <connections>
-                                    <action selector="pilulierButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ykx-b1-cCW"/>
                                     <segue destination="53l-Qt-H10" kind="show" identifier="pilulierSegue" id="GLo-92-tkR"/>
                                 </connections>
                             </button>
@@ -79,15 +78,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Jzf-DF-y0v" firstAttribute="centerX" secondItem="PBt-DR-YH1" secondAttribute="centerX" id="1bY-jr-1hH"/>
                             <constraint firstItem="PBt-DR-YH1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="113" id="1nY-iS-Q2L"/>
                             <constraint firstItem="i3i-D3-czX" firstAttribute="top" secondItem="Jzf-DF-y0v" secondAttribute="bottom" constant="8" id="7PX-xg-NN5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dQm-Nd-Gon" secondAttribute="trailing" constant="100" id="JPf-59-1Py"/>
                             <constraint firstItem="Jzf-DF-y0v" firstAttribute="top" secondItem="dQm-Nd-Gon" secondAttribute="bottom" constant="8" id="Kny-fQ-aUf"/>
                             <constraint firstItem="Jzf-DF-y0v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="MBS-9A-CMQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jzf-DF-y0v" secondAttribute="trailing" constant="100" id="QlO-qQ-IIA"/>
+                            <constraint firstItem="i3i-D3-czX" firstAttribute="centerX" secondItem="PBt-DR-YH1" secondAttribute="centerX" id="VPD-qP-5aF"/>
                             <constraint firstItem="dQm-Nd-Gon" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="X7r-Lg-rEH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i3i-D3-czX" secondAttribute="trailing" constant="100" id="Z73-Av-xJP"/>
                             <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="PBt-DR-YH1" secondAttribute="trailing" constant="84" id="arU-S3-l24"/>
+                            <constraint firstItem="dQm-Nd-Gon" firstAttribute="centerX" secondItem="PBt-DR-YH1" secondAttribute="centerX" id="fnQ-D6-hRx"/>
                             <constraint firstItem="dQm-Nd-Gon" firstAttribute="top" secondItem="PBt-DR-YH1" secondAttribute="bottom" constant="8" id="vGN-jd-fCV"/>
                             <constraint firstItem="i3i-D3-czX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="vZh-m7-9es"/>
                             <constraint firstItem="PBt-DR-YH1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="zxH-D2-aaa"/>
@@ -100,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="432.80000000000001" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Pilulier View Controller-->
         <scene sceneID="LDR-ka-Kdf">
             <objects>
-                <viewController id="53l-Qt-H10" customClass="ViewController" customModule="PkCHU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="53l-Qt-H10" customClass="PilulierViewController" customModule="PkCHU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XnX-jP-mRS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
