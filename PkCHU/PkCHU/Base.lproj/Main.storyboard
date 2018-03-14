@@ -81,17 +81,11 @@
                             <constraint firstItem="Jzf-DF-y0v" firstAttribute="centerX" secondItem="PBt-DR-YH1" secondAttribute="centerX" id="1bY-jr-1hH"/>
                             <constraint firstItem="PBt-DR-YH1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="113" id="1nY-iS-Q2L"/>
                             <constraint firstItem="i3i-D3-czX" firstAttribute="top" secondItem="Jzf-DF-y0v" secondAttribute="bottom" constant="8" id="7PX-xg-NN5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dQm-Nd-Gon" secondAttribute="trailing" constant="100" id="JPf-59-1Py"/>
                             <constraint firstItem="Jzf-DF-y0v" firstAttribute="top" secondItem="dQm-Nd-Gon" secondAttribute="bottom" constant="8" id="Kny-fQ-aUf"/>
-                            <constraint firstItem="Jzf-DF-y0v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="MBS-9A-CMQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jzf-DF-y0v" secondAttribute="trailing" constant="100" id="QlO-qQ-IIA"/>
                             <constraint firstItem="i3i-D3-czX" firstAttribute="centerX" secondItem="PBt-DR-YH1" secondAttribute="centerX" id="VPD-qP-5aF"/>
-                            <constraint firstItem="dQm-Nd-Gon" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="X7r-Lg-rEH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i3i-D3-czX" secondAttribute="trailing" constant="100" id="Z73-Av-xJP"/>
                             <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="PBt-DR-YH1" secondAttribute="trailing" constant="84" id="arU-S3-l24"/>
                             <constraint firstItem="dQm-Nd-Gon" firstAttribute="centerX" secondItem="PBt-DR-YH1" secondAttribute="centerX" id="fnQ-D6-hRx"/>
                             <constraint firstItem="dQm-Nd-Gon" firstAttribute="top" secondItem="PBt-DR-YH1" secondAttribute="bottom" constant="8" id="vGN-jd-fCV"/>
-                            <constraint firstItem="i3i-D3-czX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="vZh-m7-9es"/>
                             <constraint firstItem="PBt-DR-YH1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="zxH-D2-aaa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -109,30 +103,13 @@
                     <view key="view" contentMode="scaleToFill" id="XnX-jP-mRS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGG-iq-EZM">
-                                <rect key="frame" x="166" y="104" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="ehg-O6-Lpn"/>
-                                    <constraint firstAttribute="height" constant="21" id="sgY-5A-axw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="hng-uP-EPY" firstAttribute="trailing" secondItem="yGG-iq-EZM" secondAttribute="trailing" constant="167" id="D2O-VK-wGU"/>
-                            <constraint firstItem="yGG-iq-EZM" firstAttribute="top" secondItem="hng-uP-EPY" secondAttribute="top" constant="40" id="wib-V8-sYb"/>
-                            <constraint firstItem="yGG-iq-EZM" firstAttribute="leading" secondItem="hng-uP-EPY" secondAttribute="leading" constant="166" id="yyj-hG-Pv8"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hng-uP-EPY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nra-Vf-OnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="116"/>
+            <point key="canvasLocation" x="1205.5999999999999" y="115.59220389805098"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p0S-yz-cTR">
