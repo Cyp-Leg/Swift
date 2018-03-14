@@ -1,15 +1,14 @@
 //
-//  HomeViewController.swift
+//  RdvViewController.swift
 //  PkCHU
 //
-//  Created by MACHA on 07/03/2018.
+//  Created by cyp on 14/03/2018.
 //  Copyright © 2018 cyp. All rights reserved.
 //
 
 import UIKit
 
-class HomeVieswController: UIViewController {
-
+class RdvViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

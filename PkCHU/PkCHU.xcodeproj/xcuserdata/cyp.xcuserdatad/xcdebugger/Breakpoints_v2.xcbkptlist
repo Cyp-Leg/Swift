@@ -9,101 +9,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PkCHU/ViewController.swift"
-            timestampString = "542566338.6466351"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3"
-            endingLineNumber = "3"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PkCHU.ViewController.__deallocating_deinit"
-                  moduleName = "PkCHU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyp/Documents/Swift/PkCHU/PkCHU/ViewController.swift"
-                  timestampString = "542566339.944193"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PkCHU.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; PkCHU.ViewController"
-                  moduleName = "PkCHU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyp/Documents/Swift/PkCHU/PkCHU/ViewController.swift"
-                  timestampString = "542566339.9494309"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PkCHU.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; PkCHU.ViewController"
-                  moduleName = "PkCHU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyp/Documents/Swift/PkCHU/PkCHU/ViewController.swift"
-                  timestampString = "542566339.95469"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "283">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PkCHU.ViewController.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;PkCHU.ViewController&gt;"
-                  moduleName = "PkCHU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyp/Documents/Swift/PkCHU/PkCHU/ViewController.swift"
-                  timestampString = "542566339.9596"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PkCHU.ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;PkCHU.ViewController&gt;"
-                  moduleName = "PkCHU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyp/Documents/Swift/PkCHU/PkCHU/ViewController.swift"
-                  timestampString = "542566339.968061"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "116">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "PkCHU/Controller/HomeViewController.swift"
-            timestampString = "542473236.940599"
+            timestampString = "542721394.2153291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2"
@@ -119,7 +26,7 @@
                   moduleName = "PkCHU"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cyp/Documents/Swift/PkCHU/PkCHU/Controller/HomeViewController.swift"
-                  timestampString = "542566339.990383"
+                  timestampString = "542721395.009915"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -134,7 +41,7 @@
                   moduleName = "PkCHU"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cyp/Documents/Swift/PkCHU/PkCHU/Controller/HomeViewController.swift"
-                  timestampString = "542566339.998265"
+                  timestampString = "542721395.012266"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -149,7 +56,7 @@
                   moduleName = "PkCHU"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cyp/Documents/Swift/PkCHU/PkCHU/Controller/HomeViewController.swift"
-                  timestampString = "542566340.00361"
+                  timestampString = "542721395.015359"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
@@ -164,7 +71,7 @@
                   moduleName = "PkCHU"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cyp/Documents/Swift/PkCHU/PkCHU/Controller/HomeViewController.swift"
-                  timestampString = "542566340.008687"
+                  timestampString = "542721395.018662"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -179,7 +86,7 @@
                   moduleName = "PkCHU"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cyp/Documents/Swift/PkCHU/PkCHU/Controller/HomeViewController.swift"
-                  timestampString = "542566340.014384"
+                  timestampString = "542721395.023782"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
@@ -187,6 +94,22 @@
                   offsetFromSymbolStart = "116">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PkCHU/ViewController.swift"
+            timestampString = "542721394.215719"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "didReceiveMemoryWarning()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
