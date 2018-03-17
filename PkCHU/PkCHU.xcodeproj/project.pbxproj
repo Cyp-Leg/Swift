@@ -19,6 +19,9 @@
 		3D4F99092046A96800307C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F99072046A96800307C66 /* LaunchScreen.storyboard */; };
 		3D4F99142046A96800307C66 /* PkCHUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F99132046A96800307C66 /* PkCHUTests.swift */; };
 		3D4F991F2046A96800307C66 /* PkCHUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F991E2046A96800307C66 /* PkCHUUITests.swift */; };
+		3D694EDF205D6E9B00C15B29 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D694EDE205D6E9B00C15B29 /* ActivitiesViewController.swift */; };
+		3D694EE1205D706300C15B29 /* AjoutActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D694EE0205D706300C15B29 /* AjoutActiviteViewController.swift */; };
+		3D694EE3205D766400C15B29 /* ActiviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D694EE2205D766400C15B29 /* ActiviteTableViewCell.swift */; };
 		3DE92460205929210097C6B5 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9245F205929210097C6B5 /* AgendaViewController.swift */; };
 		3DE9246220592B670097C6B5 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9246120592B670097C6B5 /* CoachViewController.swift */; };
 		3DE9246420592B790097C6B5 /* SymptomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9246320592B790097C6B5 /* SymptomesViewController.swift */; };
@@ -62,6 +65,9 @@
 		3D4F991A2046A96800307C66 /* PkCHUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PkCHUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4F991E2046A96800307C66 /* PkCHUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PkCHUUITests.swift; sourceTree = "<group>"; };
 		3D4F99202046A96800307C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D694EDE205D6E9B00C15B29 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		3D694EE0205D706300C15B29 /* AjoutActiviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutActiviteViewController.swift; sourceTree = "<group>"; };
+		3D694EE2205D766400C15B29 /* ActiviteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteTableViewCell.swift; sourceTree = "<group>"; };
 		3DE9245F205929210097C6B5 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		3DE9246120592B670097C6B5 /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
 		3DE9246320592B790097C6B5 /* SymptomesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomesViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 		87C5C76C2050623E006BDABA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3D694EE2205D766400C15B29 /* ActiviteTableViewCell.swift */,
 				87C5C76D20506275006BDABA /* HomeViewController.swift */,
 				3D2884552056E2D000302567 /* PilulierViewController.swift */,
 				3DE9245F205929210097C6B5 /* AgendaViewController.swift */,
@@ -167,6 +174,8 @@
 				3DE9246320592B790097C6B5 /* SymptomesViewController.swift */,
 				3DE92465205938490097C6B5 /* RdvViewController.swift */,
 				3DE92467205940470097C6B5 /* AjoutRdvViewController.swift */,
+				3D694EDE205D6E9B00C15B29 /* ActivitiesViewController.swift */,
+				3D694EE0205D706300C15B29 /* AjoutActiviteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,9 +318,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4F98FE2046A96700307C66 /* ViewController.swift in Sources */,
+				3D694EDF205D6E9B00C15B29 /* ActivitiesViewController.swift in Sources */,
 				3DE92466205938490097C6B5 /* RdvViewController.swift in Sources */,
+				3D694EE1205D706300C15B29 /* AjoutActiviteViewController.swift in Sources */,
 				3DE9246220592B670097C6B5 /* CoachViewController.swift in Sources */,
 				3D4F98FC2046A96700307C66 /* AppDelegate.swift in Sources */,
+				3D694EE3205D766400C15B29 /* ActiviteTableViewCell.swift in Sources */,
 				3D28845C2056E5EA00302567 /* ActiviteModel.swift in Sources */,
 				3D4F99042046A96800307C66 /* PkCHU.xcdatamodeld in Sources */,
 				87C5C76E20506275006BDABA /* HomeViewController.swift in Sources */,

@@ -2,7 +2,9 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
         <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heureDebut" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recurrence" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="effectuer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="effectuer" inverseEntity="Patient" syncable="YES"/>
     </entity>
     <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
@@ -55,7 +57,7 @@
         <relationship name="posseder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Patient" inverseName="posseder" inverseEntity="Patient" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activite" positionX="-162" positionY="-126" width="128" height="90"/>
+        <element name="Activite" positionX="-162" positionY="-126" width="128" height="120"/>
         <element name="Medicament" positionX="-324" positionY="245" width="128" height="103"/>
         <element name="Ordonnance" positionX="-173" positionY="425" width="128" height="103"/>
         <element name="Patient" positionX="-101" positionY="60" width="128" height="118"/>
