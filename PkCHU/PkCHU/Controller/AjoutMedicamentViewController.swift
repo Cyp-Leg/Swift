@@ -10,6 +10,8 @@ import UIKit
 
 class AjoutMedicamentViewController: UITableViewController {
 
+    @IBAction func AddMedicament(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

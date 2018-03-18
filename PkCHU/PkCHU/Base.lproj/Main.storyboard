@@ -162,6 +162,9 @@
                                     <constraint firstAttribute="height" constant="49" id="MvK-Wt-BgZ"/>
                                 </constraints>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="validateActivite:" destination="sPf-tj-NnU" eventType="touchUpInside" id="Q7c-Hr-lVZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -386,6 +389,9 @@
                                     <constraint firstAttribute="height" constant="49" id="equ-EC-INg"/>
                                 </constraints>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="addActivite:" destination="a6g-Ui-u9P" eventType="touchUpInside" id="rY1-2a-ueU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zid-Tq-mZP">
                                 <rect key="frame" x="189" y="598" width="170" height="49"/>
@@ -763,6 +769,9 @@
                                     <constraint firstAttribute="height" constant="49" id="bGZ-cm-TmH"/>
                                 </constraints>
                                 <state key="normal" title="Ajouter ce médicament"/>
+                                <connections>
+                                    <action selector="AddMedicament:" destination="Rmv-5h-Gco" eventType="touchUpInside" id="jaj-jr-LD3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Iy-R8-0q6">
                                 <rect key="frame" x="16" y="559" width="343" height="49"/>
@@ -927,6 +936,9 @@
                                     <constraint firstAttribute="height" constant="49" id="5yK-Ml-JKC"/>
                                 </constraints>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="addTraitement:" destination="lDn-gI-SA4" eventType="touchUpInside" id="jpZ-WB-lCu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rP9-gj-xPB">
                                 <rect key="frame" x="195" y="598" width="164" height="49"/>
@@ -1082,11 +1094,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-cU-TA8">
                                 <rect key="frame" x="202" y="481" width="157" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="49" id="cNZ-63-H7w"/>
-                                    <constraint firstAttribute="height" constant="49" id="iKH-vh-A8n"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="zHp-f9-56Q"/>
                                 </constraints>
                                 <state key="normal" title="Supprimer"/>
+                                <connections>
+                                    <action selector="deleteRdv:" destination="aoC-0K-AqP" eventType="touchUpInside" id="WGL-iK-Lon"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1159,6 +1172,9 @@
                                     <constraint firstAttribute="height" constant="49" id="xhC-Db-Q1I"/>
                                 </constraints>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="addRdv:" destination="EUw-Bj-AMz" eventType="touchUpInside" id="dV0-2n-CMa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oD-By-Oaq">
                                 <rect key="frame" x="195" y="554" width="164" height="49"/>
@@ -1256,10 +1272,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="FcR-YO-5oT"/>
         <segue reference="hnU-B5-Sb6"/>
         <segue reference="5Xh-qF-tqu"/>
         <segue reference="g2E-OP-b67"/>
         <segue reference="qZd-Jr-LMY"/>
-        <segue reference="nG4-Mj-NCy"/>
+        <segue reference="hmb-o1-8u3"/>
     </inferredMetricsTieBreakers>
 </document>

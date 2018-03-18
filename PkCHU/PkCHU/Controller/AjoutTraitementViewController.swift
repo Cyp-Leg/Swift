@@ -10,6 +10,8 @@ import UIKit
 
 class AjoutTraitementViewController: UITableViewController {
 
+    @IBAction func addTraitement(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
