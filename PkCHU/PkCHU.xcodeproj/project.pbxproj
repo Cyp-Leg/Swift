@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3D2884562056E2D000302567 /* PilulierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2884552056E2D000302567 /* PilulierViewController.swift */; };
-		3D2884572056E2D000302567 /* PilulierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2884552056E2D000302567 /* PilulierViewController.swift */; };
 		3D28845C2056E5EA00302567 /* ActiviteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D28845B2056E5EA00302567 /* ActiviteModel.swift */; };
-		3D28845D2056E5EA00302567 /* ActiviteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D28845B2056E5EA00302567 /* ActiviteModel.swift */; };
 		3D3FA9D1205FC324000A4297 /* TabSyntheseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */; };
+		3D3FA9D3205FF02D000A4297 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FA9D2205FF02D000A4297 /* CoreDataManager.swift */; };
+		3D3FA9D5205FF1DC000A4297 /* ActiviteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FA9D4205FF1DC000A4297 /* ActiviteDAO.swift */; };
 		3D4F98FC2046A96700307C66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F98FB2046A96700307C66 /* AppDelegate.swift */; };
 		3D4F98FE2046A96700307C66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F98FD2046A96700307C66 /* ViewController.swift */; };
 		3D4F99012046A96700307C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F98FF2046A96700307C66 /* Main.storyboard */; };
@@ -33,7 +33,6 @@
 		3DE92466205938490097C6B5 /* RdvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE92465205938490097C6B5 /* RdvViewController.swift */; };
 		3DE92468205940470097C6B5 /* AjoutRdvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE92467205940470097C6B5 /* AjoutRdvViewController.swift */; };
 		87C5C76E20506275006BDABA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5C76D20506275006BDABA /* HomeViewController.swift */; };
-		87C5C76F20506275006BDABA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5C76D20506275006BDABA /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +56,8 @@
 		3D2884552056E2D000302567 /* PilulierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilulierViewController.swift; sourceTree = "<group>"; };
 		3D28845B2056E5EA00302567 /* ActiviteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActiviteModel.swift; path = PkCHU/ActiviteModel.swift; sourceTree = SOURCE_ROOT; };
 		3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSyntheseViewController.swift; sourceTree = "<group>"; };
+		3D3FA9D2205FF02D000A4297 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3D3FA9D4205FF1DC000A4297 /* ActiviteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteDAO.swift; sourceTree = "<group>"; };
 		3D4F98F82046A96700307C66 /* PkCHU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PkCHU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4F98FB2046A96700307C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D4F98FD2046A96700307C66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +143,6 @@
 				3D4F99052046A96800307C66 /* Assets.xcassets */,
 				3D4F99072046A96800307C66 /* LaunchScreen.storyboard */,
 				3D4F990A2046A96800307C66 /* Info.plist */,
-				3D4F99022046A96800307C66 /* PkCHU.xcdatamodeld */,
 			);
 			path = PkCHU;
 			sourceTree = "<group>";
@@ -168,7 +168,10 @@
 		3D6EF0C120556C2600D743A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3D4F99022046A96800307C66 /* PkCHU.xcdatamodeld */,
 				3D28845B2056E5EA00302567 /* ActiviteModel.swift */,
+				3D3FA9D2205FF02D000A4297 /* CoreDataManager.swift */,
+				3D3FA9D4205FF1DC000A4297 /* ActiviteDAO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,7 +353,9 @@
 				3D2884562056E2D000302567 /* PilulierViewController.swift in Sources */,
 				3DE9246420592B790097C6B5 /* SymptomesViewController.swift in Sources */,
 				3DE92468205940470097C6B5 /* AjoutRdvViewController.swift in Sources */,
+				3D3FA9D3205FF02D000A4297 /* CoreDataManager.swift in Sources */,
 				3D5D20EF205EAAFB005FEA27 /* TraitementViewController.swift in Sources */,
+				3D3FA9D5205FF1DC000A4297 /* ActiviteDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,10 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D28845D2056E5EA00302567 /* ActiviteModel.swift in Sources */,
 				3D4F99142046A96800307C66 /* PkCHUTests.swift in Sources */,
-				3D2884572056E2D000302567 /* PilulierViewController.swift in Sources */,
-				87C5C76F20506275006BDABA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

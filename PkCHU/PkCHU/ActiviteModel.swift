@@ -10,8 +10,53 @@ import Foundation
 import UIKit
 import CoreData
 
-extension Activite{
-    func ok(){
+class ActiviteModel{
+    private var dao : Activite
+    
+    var libelle: String {
+        get{
+            return self.dao.libelle!
+        }
+        set{
+            self.dao.libelle = newValue
+        }
+    }
+    
+    var descript: String {
+        get{
+            return self.dao.descript!
+        }
+        set{
+            self.dao.descript = newValue
+        }
+    }
+    
+    var recurrence: String {
+        get{
+            return self.dao.recurrence!
+        }
+        set{
+            self.dao.recurrence = newValue
+        }
+    }
+    
+    var heureDebut: String {
+        get{
+            return self.dao.heureDebut!
+        }
+        set{
+            self.dao.heureDebut = newValue
+        }
+    }
+    
+    init(libelle : String, descript : String, recurrence : String, heureDebut : String){
+        let entity = CoreDataManager.entity(forName: "Activite")
+        self.dao = Activite(entity: entity, insertInto: CoreDataManager.context)
+        self.dao.libelle=libelle
+        self.dao.descript=descript
+        self.dao.recurrence=recurrence
+        self.dao.heureDebut=heureDebut
     }
     
 }
+
