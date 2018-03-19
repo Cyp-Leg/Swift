@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D06F247206055E500E50E9E /* SymptomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F246206055E500E50E9E /* SymptomeModel.swift */; };
+		3D06F2492060565100E50E9E /* SymptomeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F2482060565100E50E9E /* SymptomeDAO.swift */; };
+		3D06F24B2060568A00E50E9E /* MedicamentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F24A2060568A00E50E9E /* MedicamentModel.swift */; };
+		3D06F24D20605CFE00E50E9E /* MedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F24C20605CFE00E50E9E /* MedicamentDAO.swift */; };
+		3D06F24F20605D3300E50E9E /* OrdonnanceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F24E20605D3300E50E9E /* OrdonnanceDAO.swift */; };
+		3D06F25120605D5B00E50E9E /* OrdonnanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F25020605D5B00E50E9E /* OrdonnanceModel.swift */; };
+		3D06F2532060600F00E50E9E /* PatientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F2522060600F00E50E9E /* PatientDAO.swift */; };
+		3D06F2552060604600E50E9E /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F2542060604600E50E9E /* PatientModel.swift */; };
+		3D06F2592060609800E50E9E /* PriseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F2582060609800E50E9E /* PriseModel.swift */; };
+		3D06F25B2060632F00E50E9E /* PriseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F25A2060632F00E50E9E /* PriseDAO.swift */; };
+		3D06F25D2060635D00E50E9E /* ProfessionnelDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F25C2060635D00E50E9E /* ProfessionnelDAO.swift */; };
+		3D06F25F2060639A00E50E9E /* ProfessionnelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F25E2060639A00E50E9E /* ProfessionnelModel.swift */; };
+		3D06F2612060649800E50E9E /* RdvDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F2602060649800E50E9E /* RdvDAO.swift */; };
+		3D06F263206064C400E50E9E /* RdvModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F262206064C400E50E9E /* RdvModel.swift */; };
+		3D06F2652060654300E50E9E /* SpecialiteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F2642060654300E50E9E /* SpecialiteModel.swift */; };
+		3D06F2672060659A00E50E9E /* SpecialiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F2662060659A00E50E9E /* SpecialiteDAO.swift */; };
 		3D2884562056E2D000302567 /* PilulierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2884552056E2D000302567 /* PilulierViewController.swift */; };
 		3D28845C2056E5EA00302567 /* ActiviteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D28845B2056E5EA00302567 /* ActiviteModel.swift */; };
 		3D3FA9D1205FC324000A4297 /* TabSyntheseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */; };
@@ -53,6 +69,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D06F246206055E500E50E9E /* SymptomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeModel.swift; sourceTree = "<group>"; };
+		3D06F2482060565100E50E9E /* SymptomeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeDAO.swift; sourceTree = "<group>"; };
+		3D06F24A2060568A00E50E9E /* MedicamentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentModel.swift; sourceTree = "<group>"; };
+		3D06F24C20605CFE00E50E9E /* MedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDAO.swift; sourceTree = "<group>"; };
+		3D06F24E20605D3300E50E9E /* OrdonnanceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdonnanceDAO.swift; sourceTree = "<group>"; };
+		3D06F25020605D5B00E50E9E /* OrdonnanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdonnanceModel.swift; sourceTree = "<group>"; };
+		3D06F2522060600F00E50E9E /* PatientDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDAO.swift; sourceTree = "<group>"; };
+		3D06F2542060604600E50E9E /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
+		3D06F2582060609800E50E9E /* PriseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriseModel.swift; sourceTree = "<group>"; };
+		3D06F25A2060632F00E50E9E /* PriseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriseDAO.swift; sourceTree = "<group>"; };
+		3D06F25C2060635D00E50E9E /* ProfessionnelDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionnelDAO.swift; sourceTree = "<group>"; };
+		3D06F25E2060639A00E50E9E /* ProfessionnelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionnelModel.swift; sourceTree = "<group>"; };
+		3D06F2602060649800E50E9E /* RdvDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RdvDAO.swift; sourceTree = "<group>"; };
+		3D06F262206064C400E50E9E /* RdvModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RdvModel.swift; sourceTree = "<group>"; };
+		3D06F2642060654300E50E9E /* SpecialiteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialiteModel.swift; sourceTree = "<group>"; };
+		3D06F2662060659A00E50E9E /* SpecialiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialiteDAO.swift; sourceTree = "<group>"; };
 		3D2884552056E2D000302567 /* PilulierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilulierViewController.swift; sourceTree = "<group>"; };
 		3D28845B2056E5EA00302567 /* ActiviteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActiviteModel.swift; path = PkCHU/ActiviteModel.swift; sourceTree = SOURCE_ROOT; };
 		3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSyntheseViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +204,22 @@
 				3D28845B2056E5EA00302567 /* ActiviteModel.swift */,
 				3D3FA9D2205FF02D000A4297 /* CoreDataManager.swift */,
 				3D3FA9D4205FF1DC000A4297 /* ActiviteDAO.swift */,
+				3D06F246206055E500E50E9E /* SymptomeModel.swift */,
+				3D06F2482060565100E50E9E /* SymptomeDAO.swift */,
+				3D06F24A2060568A00E50E9E /* MedicamentModel.swift */,
+				3D06F24C20605CFE00E50E9E /* MedicamentDAO.swift */,
+				3D06F24E20605D3300E50E9E /* OrdonnanceDAO.swift */,
+				3D06F25020605D5B00E50E9E /* OrdonnanceModel.swift */,
+				3D06F2522060600F00E50E9E /* PatientDAO.swift */,
+				3D06F2542060604600E50E9E /* PatientModel.swift */,
+				3D06F2582060609800E50E9E /* PriseModel.swift */,
+				3D06F25A2060632F00E50E9E /* PriseDAO.swift */,
+				3D06F25C2060635D00E50E9E /* ProfessionnelDAO.swift */,
+				3D06F25E2060639A00E50E9E /* ProfessionnelModel.swift */,
+				3D06F2602060649800E50E9E /* RdvDAO.swift */,
+				3D06F262206064C400E50E9E /* RdvModel.swift */,
+				3D06F2642060654300E50E9E /* SpecialiteModel.swift */,
+				3D06F2662060659A00E50E9E /* SpecialiteDAO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,25 +383,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D06F25F2060639A00E50E9E /* ProfessionnelModel.swift in Sources */,
+				3D06F2532060600F00E50E9E /* PatientDAO.swift in Sources */,
 				3D4F98FE2046A96700307C66 /* ViewController.swift in Sources */,
 				3D694EDF205D6E9B00C15B29 /* ActivitiesViewController.swift in Sources */,
 				3DE92466205938490097C6B5 /* RdvViewController.swift in Sources */,
 				3D694EE1205D706300C15B29 /* AjoutActiviteViewController.swift in Sources */,
+				3D06F24D20605CFE00E50E9E /* MedicamentDAO.swift in Sources */,
 				3DE9246220592B670097C6B5 /* CoachViewController.swift in Sources */,
+				3D06F2652060654300E50E9E /* SpecialiteModel.swift in Sources */,
+				3D06F2672060659A00E50E9E /* SpecialiteDAO.swift in Sources */,
 				3D3FA9D1205FC324000A4297 /* TabSyntheseViewController.swift in Sources */,
+				3D06F25120605D5B00E50E9E /* OrdonnanceModel.swift in Sources */,
+				3D06F2592060609800E50E9E /* PriseModel.swift in Sources */,
 				3D5D20F5205EBAEF005FEA27 /* AjoutMedicamentViewController.swift in Sources */,
 				3D5D20F1205EB6E2005FEA27 /* AjoutTraitementViewController.swift in Sources */,
+				3D06F25D2060635D00E50E9E /* ProfessionnelDAO.swift in Sources */,
+				3D06F24F20605D3300E50E9E /* OrdonnanceDAO.swift in Sources */,
+				3D06F24B2060568A00E50E9E /* MedicamentModel.swift in Sources */,
+				3D06F25B2060632F00E50E9E /* PriseDAO.swift in Sources */,
 				3D4F98FC2046A96700307C66 /* AppDelegate.swift in Sources */,
 				3D694EE3205D766400C15B29 /* ActiviteTableViewCell.swift in Sources */,
+				3D06F263206064C400E50E9E /* RdvModel.swift in Sources */,
 				3D28845C2056E5EA00302567 /* ActiviteModel.swift in Sources */,
 				3D4F99042046A96800307C66 /* PkCHU.xcdatamodeld in Sources */,
 				87C5C76E20506275006BDABA /* HomeViewController.swift in Sources */,
 				3D5D20F3205EBA5D005FEA27 /* OrdonnanceViewController.swift in Sources */,
+				3D06F2492060565100E50E9E /* SymptomeDAO.swift in Sources */,
+				3D06F2552060604600E50E9E /* PatientModel.swift in Sources */,
+				3D06F2612060649800E50E9E /* RdvDAO.swift in Sources */,
 				3DE92460205929210097C6B5 /* AgendaViewController.swift in Sources */,
 				3D2884562056E2D000302567 /* PilulierViewController.swift in Sources */,
 				3DE9246420592B790097C6B5 /* SymptomesViewController.swift in Sources */,
 				3DE92468205940470097C6B5 /* AjoutRdvViewController.swift in Sources */,
 				3D3FA9D3205FF02D000A4297 /* CoreDataManager.swift in Sources */,
+				3D06F247206055E500E50E9E /* SymptomeModel.swift in Sources */,
 				3D5D20EF205EAAFB005FEA27 /* TraitementViewController.swift in Sources */,
 				3D3FA9D5205FF1DC000A4297 /* ActiviteDAO.swift in Sources */,
 			);
