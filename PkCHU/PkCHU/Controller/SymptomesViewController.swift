@@ -14,7 +14,7 @@ class SymptomesViewController: UIViewController {
     }
     
     @IBAction func addOffSymptome(_ sender: Any) {
-    }    
+    }
     
     @IBAction func addDyskSymptome(_ sender: Any) {
     }
