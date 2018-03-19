@@ -11,6 +11,7 @@
 		3D2884572056E2D000302567 /* PilulierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2884552056E2D000302567 /* PilulierViewController.swift */; };
 		3D28845C2056E5EA00302567 /* ActiviteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D28845B2056E5EA00302567 /* ActiviteModel.swift */; };
 		3D28845D2056E5EA00302567 /* ActiviteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D28845B2056E5EA00302567 /* ActiviteModel.swift */; };
+		3D3FA9D1205FC324000A4297 /* TabSyntheseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */; };
 		3D4F98FC2046A96700307C66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F98FB2046A96700307C66 /* AppDelegate.swift */; };
 		3D4F98FE2046A96700307C66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F98FD2046A96700307C66 /* ViewController.swift */; };
 		3D4F99012046A96700307C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F98FF2046A96700307C66 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		3D2884552056E2D000302567 /* PilulierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilulierViewController.swift; sourceTree = "<group>"; };
 		3D28845B2056E5EA00302567 /* ActiviteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActiviteModel.swift; path = PkCHU/ActiviteModel.swift; sourceTree = SOURCE_ROOT; };
+		3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSyntheseViewController.swift; sourceTree = "<group>"; };
 		3D4F98F82046A96700307C66 /* PkCHU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PkCHU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4F98FB2046A96700307C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D4F98FD2046A96700307C66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				3D5D20F0205EB6E2005FEA27 /* AjoutTraitementViewController.swift */,
 				3D5D20F2205EBA5D005FEA27 /* OrdonnanceViewController.swift */,
 				3D5D20F4205EBAEF005FEA27 /* AjoutMedicamentViewController.swift */,
+				3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				3DE92466205938490097C6B5 /* RdvViewController.swift in Sources */,
 				3D694EE1205D706300C15B29 /* AjoutActiviteViewController.swift in Sources */,
 				3DE9246220592B670097C6B5 /* CoachViewController.swift in Sources */,
+				3D3FA9D1205FC324000A4297 /* TabSyntheseViewController.swift in Sources */,
 				3D5D20F5205EBAEF005FEA27 /* AjoutMedicamentViewController.swift in Sources */,
 				3D5D20F1205EB6E2005FEA27 /* AjoutTraitementViewController.swift in Sources */,
 				3D4F98FC2046A96700307C66 /* AppDelegate.swift in Sources */,

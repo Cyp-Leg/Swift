@@ -10,6 +10,8 @@ import UIKit
 
 class CoachViewController: UIViewController {
 
+    @IBAction func validateActivite(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

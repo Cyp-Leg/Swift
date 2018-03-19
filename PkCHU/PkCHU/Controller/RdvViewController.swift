@@ -10,6 +10,8 @@ import UIKit
 
 class RdvViewController: UIViewController {
 
+    @IBAction func deleteRdv(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

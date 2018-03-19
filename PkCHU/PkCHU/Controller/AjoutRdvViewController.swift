@@ -10,6 +10,8 @@ import UIKit
 
 class AjoutRdvViewController: UIViewController {
 
+    @IBAction func addRdv(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

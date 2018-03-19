@@ -10,12 +10,21 @@ import UIKit
 
 class SymptomesViewController: UIViewController {
 
+    @IBAction func addOnSymptome(_ sender: Any) {
+    }
+    
+    @IBAction func addOffSymptome(_ sender: Any) {
+    }    
+    
+    @IBAction func addDyskSymptome(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

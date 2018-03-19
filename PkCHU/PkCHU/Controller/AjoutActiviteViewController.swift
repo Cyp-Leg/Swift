@@ -10,6 +10,8 @@ import UIKit
 
 class AjoutActiviteViewController: UIViewController {
 
+    @IBAction func addActivite(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
