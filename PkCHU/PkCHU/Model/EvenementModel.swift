@@ -1,8 +1,8 @@
 //
-//  SymptomeModel.swift
+//  EvenementModel.swift
 //  PkCHU
 //
-//  Created by cyp on 19/03/2018.
+//  Created by cyp on 20/03/2018.
 //  Copyright © 2018 cyp. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import CoreData
 
-class SymptomeModel{
-    private var dao : Symptome
+class EvenementModel{
+    private var dao : Evenement
     
     var type: String {
         get{
@@ -22,16 +22,7 @@ class SymptomeModel{
         }
     }
     
-    var descript: String {
-        get{
-            return self.dao.descript!
-        }
-        set{
-            self.dao.descript = newValue
-        }
-    }
-    
-    var date: NSDate {
+    var date: NSDate{
         get{
             return self.dao.date!
         }
@@ -40,12 +31,10 @@ class SymptomeModel{
         }
     }
     
-    
-    init(type : String, descript : String, date : NSDate){
-        self.dao = Symptome.create()
+    init(type : String, date : NSDate){
+        let entity = CoreDataManager.entity(forName: "Evenement")
+        self.dao = Evenement(entity: entity, insertInto: CoreDataManager.context)
         self.dao.type=type
-        self.dao.descript=descript
         self.dao.date=date
     }
-    
 }

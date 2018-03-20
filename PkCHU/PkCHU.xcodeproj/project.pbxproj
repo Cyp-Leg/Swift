@@ -43,6 +43,10 @@
 		3D694EDF205D6E9B00C15B29 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D694EDE205D6E9B00C15B29 /* ActivitiesViewController.swift */; };
 		3D694EE1205D706300C15B29 /* AjoutActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D694EE0205D706300C15B29 /* AjoutActiviteViewController.swift */; };
 		3D694EE3205D766400C15B29 /* ActiviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D694EE2205D766400C15B29 /* ActiviteTableViewCell.swift */; };
+		3DAE8259206139FD0057936E /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE8258206139FD0057936E /* EventsViewController.swift */; };
+		3DAE825B20613E310057936E /* AjoutEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE825A20613E310057936E /* AjoutEventViewController.swift */; };
+		3DAE825D20613F730057936E /* EvenementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE825C20613F730057936E /* EvenementDAO.swift */; };
+		3DAE825F20613FA70057936E /* EvenementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE825E20613FA70057936E /* EvenementModel.swift */; };
 		3DE92460205929210097C6B5 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9245F205929210097C6B5 /* AgendaViewController.swift */; };
 		3DE9246220592B670097C6B5 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9246120592B670097C6B5 /* CoachViewController.swift */; };
 		3DE9246420592B790097C6B5 /* SymptomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9246320592B790097C6B5 /* SymptomesViewController.swift */; };
@@ -111,6 +115,10 @@
 		3D694EDE205D6E9B00C15B29 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		3D694EE0205D706300C15B29 /* AjoutActiviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutActiviteViewController.swift; sourceTree = "<group>"; };
 		3D694EE2205D766400C15B29 /* ActiviteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteTableViewCell.swift; sourceTree = "<group>"; };
+		3DAE8258206139FD0057936E /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		3DAE825A20613E310057936E /* AjoutEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutEventViewController.swift; sourceTree = "<group>"; };
+		3DAE825C20613F730057936E /* EvenementDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenementDAO.swift; sourceTree = "<group>"; };
+		3DAE825E20613FA70057936E /* EvenementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenementModel.swift; sourceTree = "<group>"; };
 		3DE9245F205929210097C6B5 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		3DE9246120592B670097C6B5 /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
 		3DE9246320592B790097C6B5 /* SymptomesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomesViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +228,8 @@
 				3D06F262206064C400E50E9E /* RdvModel.swift */,
 				3D06F2642060654300E50E9E /* SpecialiteModel.swift */,
 				3D06F2662060659A00E50E9E /* SpecialiteDAO.swift */,
+				3DAE825C20613F730057936E /* EvenementDAO.swift */,
+				3DAE825E20613FA70057936E /* EvenementModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +252,8 @@
 				3D5D20F2205EBA5D005FEA27 /* OrdonnanceViewController.swift */,
 				3D5D20F4205EBAEF005FEA27 /* AjoutMedicamentViewController.swift */,
 				3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */,
+				3DAE8258206139FD0057936E /* EventsViewController.swift */,
+				3DAE825A20613E310057936E /* AjoutEventViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -384,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D06F25F2060639A00E50E9E /* ProfessionnelModel.swift in Sources */,
+				3DAE8259206139FD0057936E /* EventsViewController.swift in Sources */,
 				3D06F2532060600F00E50E9E /* PatientDAO.swift in Sources */,
 				3D4F98FE2046A96700307C66 /* ViewController.swift in Sources */,
 				3D694EDF205D6E9B00C15B29 /* ActivitiesViewController.swift in Sources */,
@@ -406,12 +419,15 @@
 				3D694EE3205D766400C15B29 /* ActiviteTableViewCell.swift in Sources */,
 				3D06F263206064C400E50E9E /* RdvModel.swift in Sources */,
 				3D28845C2056E5EA00302567 /* ActiviteModel.swift in Sources */,
+				3DAE825D20613F730057936E /* EvenementDAO.swift in Sources */,
 				3D4F99042046A96800307C66 /* PkCHU.xcdatamodeld in Sources */,
+				3DAE825B20613E310057936E /* AjoutEventViewController.swift in Sources */,
 				87C5C76E20506275006BDABA /* HomeViewController.swift in Sources */,
 				3D5D20F3205EBA5D005FEA27 /* OrdonnanceViewController.swift in Sources */,
 				3D06F2492060565100E50E9E /* SymptomeDAO.swift in Sources */,
 				3D06F2552060604600E50E9E /* PatientModel.swift in Sources */,
 				3D06F2612060649800E50E9E /* RdvDAO.swift in Sources */,
+				3DAE825F20613FA70057936E /* EvenementModel.swift in Sources */,
 				3DE92460205929210097C6B5 /* AgendaViewController.swift in Sources */,
 				3D2884562056E2D000302567 /* PilulierViewController.swift in Sources */,
 				3DE9246420592B790097C6B5 /* SymptomesViewController.swift in Sources */,

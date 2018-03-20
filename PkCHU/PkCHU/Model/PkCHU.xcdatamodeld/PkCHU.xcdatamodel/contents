@@ -7,6 +7,11 @@
         <attribute name="recurrence" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="effectuer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="effectuer" inverseEntity="Patient" syncable="YES"/>
     </entity>
+    <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ajouter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="ajouter" inverseEntity="Patient" syncable="YES"/>
+    </entity>
     <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
         <attribute name="dose" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,6 +27,7 @@
     <entity name="Patient" representedClassName="Patient" syncable="YES" codeGenerationType="class">
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ajouter" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evenement" inverseName="ajouter" inverseEntity="Evenement" syncable="YES"/>
         <relationship name="avoir" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rdv" inverseName="avoir" inverseEntity="Rdv" syncable="YES"/>
         <relationship name="effectuer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="effectuer" inverseEntity="Activite" syncable="YES"/>
         <relationship name="posseder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Symptome" inverseName="posseder" inverseEntity="Symptome" syncable="YES"/>
@@ -52,6 +58,7 @@
         <relationship name="posseder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Professionnel" inverseName="posseder" inverseEntity="Professionnel" syncable="YES"/>
     </entity>
     <entity name="Symptome" representedClassName="Symptome" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="posseder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Patient" inverseName="posseder" inverseEntity="Patient" syncable="YES"/>
@@ -60,11 +67,12 @@
         <element name="Activite" positionX="-162" positionY="-126" width="128" height="120"/>
         <element name="Medicament" positionX="-324" positionY="245" width="128" height="103"/>
         <element name="Ordonnance" positionX="-173" positionY="425" width="128" height="103"/>
-        <element name="Patient" positionX="-101" positionY="60" width="128" height="118"/>
+        <element name="Patient" positionX="-101" positionY="60" width="128" height="133"/>
         <element name="Prise" positionX="-405" positionY="72" width="128" height="120"/>
         <element name="Professionnel" positionX="7" positionY="270" width="128" height="133"/>
         <element name="Rdv" positionX="90" positionY="132" width="128" height="103"/>
         <element name="Specialite" positionX="70" positionY="468" width="128" height="73"/>
-        <element name="Symptome" positionX="54" positionY="-120" width="128" height="88"/>
+        <element name="Symptome" positionX="54" positionY="-120" width="128" height="105"/>
+        <element name="Evenement" positionX="-369" positionY="-81" width="128" height="88"/>
     </elements>
 </model>
