@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 import CoreData
 
-class TabSyntheseViewController: UITableViewController{
+class TabSyntheseViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
     
     var symptomes : [Symptome] = []
 
     @IBOutlet weak var symptomeTable: UITableView!
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = self.symptomeTable.dequeueReusableCell(withIdentifier: "symptomeCell", for: indexPath) as! SymptomeTableViewCell
         let date = self.symptomes[indexPath.row].date! as Date
         cell.dateLabel.text = date.format()
@@ -25,7 +25,7 @@ class TabSyntheseViewController: UITableViewController{
     }
     
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.symptomes.count
     }
     
@@ -41,9 +41,10 @@ class TabSyntheseViewController: UITableViewController{
 
     override func viewDidLoad() {
         
-       guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        super.viewDidLoad()
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
-            }
+        }
         let context = appDelegate.persistentContainer.viewContext
         
         let request : NSFetchRequest<Symptome> = Symptome.fetchRequest()
@@ -68,7 +69,7 @@ class TabSyntheseViewController: UITableViewController{
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
