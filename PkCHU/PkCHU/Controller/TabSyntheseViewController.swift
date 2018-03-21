@@ -40,8 +40,20 @@ class TabSyntheseViewController: UITableViewController{
 
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
+       guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+            }
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request : NSFetchRequest<Symptome> = Symptome.fetchRequest()
+        do{
+            try self.symptomes = context.fetch(request)
+        }
+        catch let error as NSError{
+            fatalError("cannot reach data: "+error.description)
 
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -557,7 +557,7 @@
                                 </constraints>
                                 <state key="normal" title="ON"/>
                                 <connections>
-                                    <action selector="selectStateAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="qdQ-WR-rrm"/>
+                                    <action selector="selectSymptomeAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="bHq-V1-oaP"/>
                                     <segue destination="Yz4-gT-Dbm" kind="unwind" identifier="validSympt" unwindAction="unwindToSyntheseWithSender:" id="ING-8p-vbJ"/>
                                 </connections>
                             </button>
@@ -569,7 +569,7 @@
                                 </constraints>
                                 <state key="normal" title="OFF"/>
                                 <connections>
-                                    <action selector="selectStateAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="RIl-Ft-qO0"/>
+                                    <action selector="selectSymptomeAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="30G-y0-lJV"/>
                                     <segue destination="Yz4-gT-Dbm" kind="unwind" identifier="validSympt" unwindAction="unwindToSyntheseWithSender:" id="keL-J9-eQi"/>
                                 </connections>
                             </button>
@@ -591,7 +591,7 @@
                                 </constraints>
                                 <state key="normal" title="DYSKINESIES"/>
                                 <connections>
-                                    <action selector="selectStateAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="Xav-kD-uWf"/>
+                                    <action selector="selectSymptomeAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="hak-P2-Wh4"/>
                                     <segue destination="Yz4-gT-Dbm" kind="unwind" identifier="validSympt" unwindAction="unwindToSyntheseWithSender:" id="kFy-SS-WEz"/>
                                 </connections>
                             </button>
@@ -1530,7 +1530,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jnE-00-FN7"/>
+        <segue reference="smM-ZE-kre"/>
         <segue reference="Up5-8Z-Q1g"/>
         <segue reference="5Xh-qF-tqu"/>
         <segue reference="jqr-NE-6ic"/>
