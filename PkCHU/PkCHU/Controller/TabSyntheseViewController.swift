@@ -6,9 +6,38 @@
 //  Copyright © 2018 cyp. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import CoreData
 
-class TabSyntheseViewController: UITableViewController {
+class TabSyntheseViewController: UITableViewController{
+    
+    var symptomes : [Symptome] = []
+
+    @IBOutlet weak var symptomeTable: UITableView!
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = self.symptomeTable.dequeueReusableCell(withIdentifier: "symptomeCell", for: indexPath) as! SymptomeTableViewCell
+        let date = self.symptomes[indexPath.row].date! as Date
+        cell.dateLabel.text = date.format()
+        cell.symptomeLabel.text = self.symptomes[indexPath.row].type
+        return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return self.symptomes.count
+    }
+    
+    @IBAction func unwindToSynthese(sender: UIStoryboardSegue){
+        if let controller = sender.source as? SymptomesViewController{
+            if let _ = controller.symptome{
+                Symptome.save()
+            }
+        }
+        
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +58,6 @@ class TabSyntheseViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 0
     }
 

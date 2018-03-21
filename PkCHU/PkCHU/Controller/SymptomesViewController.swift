@@ -10,13 +10,22 @@ import UIKit
 
 class SymptomesViewController: UIViewController {
 
-    @IBAction func addOnSymptome(_ sender: Any) {
-    }
+    @IBOutlet weak var onBtn: UIButton!
+    @IBOutlet weak var offBtn: UIButton!
+    @IBOutlet weak var dyskBtn: UIButton!
     
-    @IBAction func addOffSymptome(_ sender: Any) {
-    }
+    var dateSympt: NSDate = NSDate()
+    var symptome: SymptomeModel!
     
-    @IBAction func addDyskSymptome(_ sender: Any) {
+    @IBAction func selectSymptomeAction(_ sender: Any) {
+        if (sender as! UIButton) == self.onBtn {
+            symptome = SymptomeModel(type: "ON", date: dateSympt)
+        } else if (sender as! UIButton) == self.offBtn {
+            symptome = SymptomeModel(type: "OFF", date: dateSympt)
+        } else {
+            symptome = SymptomeModel(type: "DYSKINESIES", date: dateSympt)
+        }
+        self.performSegue(withIdentifier: "validSympt", sender: self)
     }
     
     override func viewDidLoad() {

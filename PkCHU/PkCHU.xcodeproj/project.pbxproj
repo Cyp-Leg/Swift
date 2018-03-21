@@ -28,6 +28,8 @@
 		3D3FA9D1205FC324000A4297 /* TabSyntheseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */; };
 		3D3FA9D3205FF02D000A4297 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FA9D2205FF02D000A4297 /* CoreDataManager.swift */; };
 		3D3FA9D5205FF1DC000A4297 /* ActiviteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FA9D4205FF1DC000A4297 /* ActiviteDAO.swift */; };
+		3D49CEA12062C78A00C20C99 /* SymptomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49CEA02062C78A00C20C99 /* SymptomeTableViewCell.swift */; };
+		3D49CEA32062CD6F00C20C99 /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49CEA22062CD6F00C20C99 /* DateExt.swift */; };
 		3D4F98FC2046A96700307C66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F98FB2046A96700307C66 /* AppDelegate.swift */; };
 		3D4F98FE2046A96700307C66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F98FD2046A96700307C66 /* ViewController.swift */; };
 		3D4F99012046A96700307C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F98FF2046A96700307C66 /* Main.storyboard */; };
@@ -94,6 +96,8 @@
 		3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSyntheseViewController.swift; sourceTree = "<group>"; };
 		3D3FA9D2205FF02D000A4297 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3D3FA9D4205FF1DC000A4297 /* ActiviteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteDAO.swift; sourceTree = "<group>"; };
+		3D49CEA02062C78A00C20C99 /* SymptomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeTableViewCell.swift; sourceTree = "<group>"; };
+		3D49CEA22062CD6F00C20C99 /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		3D4F98F82046A96700307C66 /* PkCHU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PkCHU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4F98FB2046A96700307C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D4F98FD2046A96700307C66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 				3D06F2662060659A00E50E9E /* SpecialiteDAO.swift */,
 				3DAE825C20613F730057936E /* EvenementDAO.swift */,
 				3DAE825E20613FA70057936E /* EvenementModel.swift */,
+				3D49CEA22062CD6F00C20C99 /* DateExt.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 				3D3FA9D0205FC324000A4297 /* TabSyntheseViewController.swift */,
 				3DAE8258206139FD0057936E /* EventsViewController.swift */,
 				3DAE825A20613E310057936E /* AjoutEventViewController.swift */,
+				3D49CEA02062C78A00C20C99 /* SymptomeTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				3D06F2532060600F00E50E9E /* PatientDAO.swift in Sources */,
 				3D4F98FE2046A96700307C66 /* ViewController.swift in Sources */,
 				3D694EDF205D6E9B00C15B29 /* ActivitiesViewController.swift in Sources */,
+				3D49CEA12062C78A00C20C99 /* SymptomeTableViewCell.swift in Sources */,
 				3DE92466205938490097C6B5 /* RdvViewController.swift in Sources */,
 				3D694EE1205D706300C15B29 /* AjoutActiviteViewController.swift in Sources */,
 				3D06F24D20605CFE00E50E9E /* MedicamentDAO.swift in Sources */,
@@ -424,6 +431,7 @@
 				3DAE825B20613E310057936E /* AjoutEventViewController.swift in Sources */,
 				87C5C76E20506275006BDABA /* HomeViewController.swift in Sources */,
 				3D5D20F3205EBA5D005FEA27 /* OrdonnanceViewController.swift in Sources */,
+				3D49CEA32062CD6F00C20C99 /* DateExt.swift in Sources */,
 				3D06F2492060565100E50E9E /* SymptomeDAO.swift in Sources */,
 				3D06F2552060604600E50E9E /* PatientModel.swift in Sources */,
 				3D06F2612060649800E50E9E /* RdvDAO.swift in Sources */,

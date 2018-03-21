@@ -557,7 +557,8 @@
                                 </constraints>
                                 <state key="normal" title="ON"/>
                                 <connections>
-                                    <action selector="addOnSymptome:" destination="MjD-Df-uhU" eventType="touchUpInside" id="r3u-9b-4yD"/>
+                                    <action selector="selectStateAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="qdQ-WR-rrm"/>
+                                    <segue destination="Yz4-gT-Dbm" kind="unwind" identifier="validSympt" unwindAction="unwindToSyntheseWithSender:" id="ING-8p-vbJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rQ-tw-7ON">
@@ -568,7 +569,8 @@
                                 </constraints>
                                 <state key="normal" title="OFF"/>
                                 <connections>
-                                    <action selector="addOffSymptome:" destination="MjD-Df-uhU" eventType="touchUpInside" id="rzh-qo-boR"/>
+                                    <action selector="selectStateAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="RIl-Ft-qO0"/>
+                                    <segue destination="Yz4-gT-Dbm" kind="unwind" identifier="validSympt" unwindAction="unwindToSyntheseWithSender:" id="keL-J9-eQi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzq-Pk-TFA">
@@ -578,7 +580,7 @@
                                 </constraints>
                                 <state key="normal" title="Afficher le tableau de synthèse"/>
                                 <connections>
-                                    <segue destination="iip-tZ-2bU" kind="show" id="Rev-hX-awt"/>
+                                    <segue destination="iip-tZ-2bU" kind="show" id="jnE-00-FN7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ8-X6-SAr">
@@ -589,7 +591,8 @@
                                 </constraints>
                                 <state key="normal" title="DYSKINESIES"/>
                                 <connections>
-                                    <action selector="addDyskSymptome:" destination="MjD-Df-uhU" eventType="touchUpInside" id="yuY-7U-s1Q"/>
+                                    <action selector="selectStateAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="Xav-kD-uWf"/>
+                                    <segue destination="Yz4-gT-Dbm" kind="unwind" identifier="validSympt" unwindAction="unwindToSyntheseWithSender:" id="kFy-SS-WEz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -616,8 +619,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zlc-9G-CuE"/>
                     </view>
+                    <connections>
+                        <outlet property="dyskBtn" destination="qJ8-X6-SAr" id="HMd-3t-X4k"/>
+                        <outlet property="offBtn" destination="2rQ-tw-7ON" id="FdS-os-qGk"/>
+                        <outlet property="onBtn" destination="kIg-tR-9fH" id="DL2-RO-JZf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrI-xD-rh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Yz4-gT-Dbm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1325.5999999999999" y="1322.7886056971515"/>
         </scene>
@@ -644,6 +653,49 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="363" id="qa5-so-eXq"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="symptomeCell" id="53P-3d-YiJ" customClass="SymptomeTableViewCell" customModule="PkCHU" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="53P-3d-YiJ" id="iYr-WR-aqF">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJD-IQ-tDh">
+                                                    <rect key="frame" x="24" y="12" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHt-Np-yG3">
+                                                    <rect key="frame" x="286" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eHt-Np-yG3" firstAttribute="leading" secondItem="AJD-IQ-tDh" secondAttribute="trailing" constant="220" id="Ivn-fg-odA"/>
+                                                <constraint firstItem="AJD-IQ-tDh" firstAttribute="top" secondItem="iYr-WR-aqF" secondAttribute="topMargin" constant="1" id="VIt-6o-wvP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eHt-Np-yG3" secondAttribute="bottom" constant="1" id="Zcm-8U-369"/>
+                                                <constraint firstItem="AJD-IQ-tDh" firstAttribute="bottom" secondItem="iYr-WR-aqF" secondAttribute="bottomMargin" id="lsR-7o-WgM"/>
+                                                <constraint firstItem="AJD-IQ-tDh" firstAttribute="top" secondItem="iYr-WR-aqF" secondAttribute="topMargin" constant="1" id="nDM-wd-zno"/>
+                                                <constraint firstItem="eHt-Np-yG3" firstAttribute="top" secondItem="iYr-WR-aqF" secondAttribute="topMargin" id="pBY-bL-wU2"/>
+                                                <constraint firstItem="eHt-Np-yG3" firstAttribute="trailing" secondItem="iYr-WR-aqF" secondAttribute="trailingMargin" id="pR8-ZC-ICh"/>
+                                                <constraint firstItem="AJD-IQ-tDh" firstAttribute="bottom" secondItem="iYr-WR-aqF" secondAttribute="bottomMargin" id="u5R-eb-5JS"/>
+                                                <constraint firstItem="AJD-IQ-tDh" firstAttribute="leading" secondItem="iYr-WR-aqF" secondAttribute="leadingMargin" constant="9" id="upH-yp-BAx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="AJD-IQ-tDh" id="YPv-zd-ibI"/>
+                                            <outlet property="symptomeLabel" destination="eHt-Np-yG3" id="C0f-4p-I7Y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iip-tZ-2bU" id="e0K-lx-R4r"/>
+                                    <outlet property="delegate" destination="iip-tZ-2bU" id="mPo-5Y-bqm"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCH-1i-Reh">
                                 <rect key="frame" x="16" y="598" width="343" height="49"/>
@@ -670,6 +722,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gjX-fr-nQz"/>
                     </view>
+                    <connections>
+                        <outlet property="symptomeTable" destination="pWj-N9-csm" id="pgL-bY-9E0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y38-vE-Q1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1475,6 +1530,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="jnE-00-FN7"/>
         <segue reference="Up5-8Z-Q1g"/>
         <segue reference="5Xh-qF-tqu"/>
         <segue reference="jqr-NE-6ic"/>

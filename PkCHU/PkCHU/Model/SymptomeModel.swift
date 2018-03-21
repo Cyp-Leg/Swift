@@ -22,14 +22,7 @@ class SymptomeModel{
         }
     }
     
-    var descript: String {
-        get{
-            return self.dao.descript!
-        }
-        set{
-            self.dao.descript = newValue
-        }
-    }
+
     
     var date: NSDate {
         get{
@@ -41,10 +34,9 @@ class SymptomeModel{
     }
     
     
-    init(type : String, descript : String, date : NSDate){
+    init(type : String, date : NSDate){
         self.dao = Symptome.create()
         self.dao.type=type
-        self.dao.descript=descript
         self.dao.date=date
     }
     
