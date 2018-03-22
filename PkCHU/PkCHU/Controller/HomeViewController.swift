@@ -26,6 +26,8 @@ class HomeViewController: UIViewController {
         if let controller = sender.source as? SymptomesViewController{
             if let _ = controller.symptome{
                 Symptome.save()
+                print(controller.symptome?.type)
+                print(controller.symptome?.date)
             }
         }
     }

@@ -29,14 +29,14 @@ class TabSyntheseViewController: UIViewController , UITableViewDataSource, UITab
         return self.symptomes.count
     }
     
-    @IBAction func unwindToSynthese(sender: UIStoryboardSegue){
+    /*@IBAction func unwindToSynthese(sender: UIStoryboardSegue){
        /* if let controller = sender.source as? SymptomesViewController{
             if let _ = controller.symptome{
                 Symptome.save()
             }
         }
         */
-    }
+    }*/
 
 
     override func viewDidLoad() {
