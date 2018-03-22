@@ -470,21 +470,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mes événements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icP-rZ-UcT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mes événements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icP-rZ-UcT">
                                 <rect key="frame" x="16" y="20" width="343" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="928-NH-tGk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y7g-7r-XCE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y7g-7r-XCE">
                                 <rect key="frame" x="16" y="80" width="343" height="427"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="427" id="vmC-Da-Qka"/>
+                                </constraints>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux9-hS-Y29">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux9-hS-Y29">
                                 <rect key="frame" x="16" y="598" width="343" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="B1j-xX-eMe"/>
+                                </constraints>
                                 <state key="normal" title="Ajouter un événement"/>
                                 <connections>
                                     <segue destination="VuI-96-JQO" kind="show" id="jPS-fG-e2M"/>
@@ -492,6 +498,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y7g-7r-XCE" firstAttribute="top" secondItem="icP-rZ-UcT" secondAttribute="bottom" constant="8" id="7rm-Yn-Ddy"/>
+                            <constraint firstItem="IGA-eW-Wv2" firstAttribute="trailing" secondItem="ux9-hS-Y29" secondAttribute="trailing" constant="16" id="FPP-U1-5cO"/>
+                            <constraint firstItem="icP-rZ-UcT" firstAttribute="top" secondItem="IGA-eW-Wv2" secondAttribute="top" id="Oef-t1-j47"/>
+                            <constraint firstItem="icP-rZ-UcT" firstAttribute="leading" secondItem="IGA-eW-Wv2" secondAttribute="leading" constant="16" id="P13-dG-kwh"/>
+                            <constraint firstItem="IGA-eW-Wv2" firstAttribute="trailing" secondItem="icP-rZ-UcT" secondAttribute="trailing" constant="16" id="XXe-0V-hXf"/>
+                            <constraint firstItem="ux9-hS-Y29" firstAttribute="leading" secondItem="IGA-eW-Wv2" secondAttribute="leading" constant="16" id="izk-0a-YpP"/>
+                            <constraint firstItem="IGA-eW-Wv2" firstAttribute="trailing" secondItem="Y7g-7r-XCE" secondAttribute="trailing" constant="16" id="j9N-MQ-Toi"/>
+                            <constraint firstItem="Y7g-7r-XCE" firstAttribute="leading" secondItem="IGA-eW-Wv2" secondAttribute="leading" constant="16" id="lNH-Uz-qCd"/>
+                            <constraint firstItem="ux9-hS-Y29" firstAttribute="top" secondItem="Y7g-7r-XCE" secondAttribute="bottom" constant="91" id="p6U-DD-0t2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IGA-eW-Wv2"/>
                     </view>
                 </viewController>
@@ -557,8 +574,7 @@
                                 </constraints>
                                 <state key="normal" title="ON"/>
                                 <connections>
-                                    <action selector="selectSymptomeAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="bHq-V1-oaP"/>
-                                    <segue destination="Yz4-gT-Dbm" kind="unwind" identifier="validSympt" unwindAction="unwindToSyntheseWithSender:" id="ING-8p-vbJ"/>
+                                    <action selector="selectSymptomeAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="9eE-8A-5dD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rQ-tw-7ON">
@@ -569,8 +585,7 @@
                                 </constraints>
                                 <state key="normal" title="OFF"/>
                                 <connections>
-                                    <action selector="selectSymptomeAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="30G-y0-lJV"/>
-                                    <segue destination="Yz4-gT-Dbm" kind="unwind" identifier="validSympt" unwindAction="unwindToSyntheseWithSender:" id="keL-J9-eQi"/>
+                                    <action selector="selectSymptomeAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="w79-5A-Txd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzq-Pk-TFA">
@@ -591,8 +606,7 @@
                                 </constraints>
                                 <state key="normal" title="DYSKINESIES"/>
                                 <connections>
-                                    <action selector="selectSymptomeAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="hak-P2-Wh4"/>
-                                    <segue destination="Yz4-gT-Dbm" kind="unwind" identifier="validSympt" unwindAction="unwindToSyntheseWithSender:" id="kFy-SS-WEz"/>
+                                    <action selector="selectSymptomeAction:" destination="MjD-Df-uhU" eventType="touchUpInside" id="q9k-V7-Ab7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -623,6 +637,7 @@
                         <outlet property="dyskBtn" destination="qJ8-X6-SAr" id="HMd-3t-X4k"/>
                         <outlet property="offBtn" destination="2rQ-tw-7ON" id="FdS-os-qGk"/>
                         <outlet property="onBtn" destination="kIg-tR-9fH" id="DL2-RO-JZf"/>
+                        <segue destination="Yz4-gT-Dbm" kind="unwind" identifier="validSympt" unwindAction="unwindToHomeWithSender:" id="CQM-0K-TxD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrI-xD-rh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1534,7 +1549,7 @@
         <segue reference="Up5-8Z-Q1g"/>
         <segue reference="5Xh-qF-tqu"/>
         <segue reference="jqr-NE-6ic"/>
-        <segue reference="rDG-Gd-Fuv"/>
+        <segue reference="qZd-Jr-LMY"/>
         <segue reference="yie-rg-VPb"/>
     </inferredMetricsTieBreakers>
 </document>

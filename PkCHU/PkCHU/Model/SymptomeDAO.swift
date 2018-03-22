@@ -11,6 +11,8 @@ import CoreData
 import UIKit
 
 extension Symptome{
+    
+    
     static func getNewSymptomeDAO() -> Symptome?{
         guard let entity = NSEntityDescription.entity(forEntityName: "Symptome", in: CoreDataManager.context) else {
             return nil

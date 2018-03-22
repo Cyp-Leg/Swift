@@ -22,6 +22,13 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindToHome(sender: UIStoryboardSegue){
+        if let controller = sender.source as? SymptomesViewController{
+            if let _ = controller.symptome{
+                Symptome.save()
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

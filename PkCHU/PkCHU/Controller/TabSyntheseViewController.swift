@@ -30,12 +30,12 @@ class TabSyntheseViewController: UIViewController , UITableViewDataSource, UITab
     }
     
     @IBAction func unwindToSynthese(sender: UIStoryboardSegue){
-        if let controller = sender.source as? SymptomesViewController{
+       /* if let controller = sender.source as? SymptomesViewController{
             if let _ = controller.symptome{
                 Symptome.save()
             }
         }
-        
+        */
     }
 
 
@@ -43,7 +43,9 @@ class TabSyntheseViewController: UIViewController , UITableViewDataSource, UITab
         
         super.viewDidLoad()
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
+/*            self.alertError(errorMsg: "Could not load data", UserInfo: "Unknown reason")
+  */    return
+            
         }
         let context = appDelegate.persistentContainer.viewContext
         

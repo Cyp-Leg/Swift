@@ -15,17 +15,17 @@ class SymptomesViewController: UIViewController {
     @IBOutlet weak var dyskBtn: UIButton!
     
     var dateSympt: NSDate = NSDate()
-    var symptome: SymptomeModel!
+    var symptome: SymptomeModel?
     
     @IBAction func selectSymptomeAction(_ sender: Any) {
-        if (sender as! UIButton) == self.onBtn {
+        if sender as? UIButton == self.onBtn {
             symptome = SymptomeModel(type: "ON", date: dateSympt)
-        } else if (sender as! UIButton) == self.offBtn {
+        } else if sender as? UIButton == self.offBtn {
             symptome = SymptomeModel(type: "OFF", date: dateSympt)
         } else {
             symptome = SymptomeModel(type: "DYSKINESIES", date: dateSympt)
         }
-        self.performSegue(withIdentifier: "validSympt", sender: self)
+        performSegue(withIdentifier: "validSympt", sender: self)
     }
     
     override func viewDidLoad() {
@@ -40,7 +40,8 @@ class SymptomesViewController: UIViewController {
     }
     
 
-    /*
+
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -48,6 +49,6 @@ class SymptomesViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
