@@ -31,14 +31,23 @@ class CoachViewController: UIViewController {
         
         dateLabel.text = Date().format()
         let request : NSFetchRequest<Activite> = Activite.fetchRequest()
+        let sort = NSSortDescriptor(key: "heureDebut", ascending: true)
+        request.sortDescriptors = [sort]
         do{
             try self.activites = context.fetch(request)
         }
         catch let error as NSError{
             fatalError("cannot reach data: "+error.description)
-            
         }
+        heureLabel.text = activites[0].heureDebut
+        nomActLabel.text = activites[0].descript
 
+        /*let predicate: NSPredicate
+        if (let heureDebut = Activite.heureDebut){
+            
+        }*/
+        //if (date > NSDate() as Date){
+        
         // Do any additional setup after loading the view.
     }
 

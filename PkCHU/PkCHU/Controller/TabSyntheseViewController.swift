@@ -72,8 +72,8 @@ class TabSyntheseViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = self.symptomeTable.dequeueReusableCell(withIdentifier: "symptomeCell", for: indexPath) as! SymptomeTableViewCell
         let date = self.symptomes[indexPath.row].date! as Date
-        cell.dateLabel.text = date.format()
-        cell.symptomeLabel.text = self.symptomes[indexPath.row].type
+            cell.dateLabel.text = date.format()
+            cell.symptomeLabel.text = self.symptomes[indexPath.row].type
         return cell
     }
 
