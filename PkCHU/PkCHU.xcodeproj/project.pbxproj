@@ -46,6 +46,7 @@
 		3D694EDF205D6E9B00C15B29 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D694EDE205D6E9B00C15B29 /* ActivitiesViewController.swift */; };
 		3D694EE1205D706300C15B29 /* AjoutActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D694EE0205D706300C15B29 /* AjoutActiviteViewController.swift */; };
 		3D694EE3205D766400C15B29 /* ActiviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D694EE2205D766400C15B29 /* ActiviteTableViewCell.swift */; };
+		3D82FF7B2065905B0026C0CE /* AjoutProfessionnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D82FF7A2065905B0026C0CE /* AjoutProfessionnelViewController.swift */; };
 		3DAE8259206139FD0057936E /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE8258206139FD0057936E /* EventsViewController.swift */; };
 		3DAE825B20613E310057936E /* AjoutEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE825A20613E310057936E /* AjoutEventViewController.swift */; };
 		3DAE825D20613F730057936E /* EvenementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE825C20613F730057936E /* EvenementDAO.swift */; };
@@ -121,6 +122,7 @@
 		3D694EDE205D6E9B00C15B29 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		3D694EE0205D706300C15B29 /* AjoutActiviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutActiviteViewController.swift; sourceTree = "<group>"; };
 		3D694EE2205D766400C15B29 /* ActiviteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteTableViewCell.swift; sourceTree = "<group>"; };
+		3D82FF7A2065905B0026C0CE /* AjoutProfessionnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutProfessionnelViewController.swift; sourceTree = "<group>"; };
 		3DAE8258206139FD0057936E /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		3DAE825A20613E310057936E /* AjoutEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutEventViewController.swift; sourceTree = "<group>"; };
 		3DAE825C20613F730057936E /* EvenementDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenementDAO.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				3DAE825A20613E310057936E /* AjoutEventViewController.swift */,
 				3D49CEA02062C78A00C20C99 /* SymptomeTableViewCell.swift */,
 				3D5332432064F0E700207C30 /* EventTableViewCell.swift */,
+				3D82FF7A2065905B0026C0CE /* AjoutProfessionnelViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				3DE92468205940470097C6B5 /* AjoutRdvViewController.swift in Sources */,
 				3D3FA9D3205FF02D000A4297 /* CoreDataManager.swift in Sources */,
 				3D06F247206055E500E50E9E /* SymptomeModel.swift in Sources */,
+				3D82FF7B2065905B0026C0CE /* AjoutProfessionnelViewController.swift in Sources */,
 				3D5D20EF205EAAFB005FEA27 /* TraitementViewController.swift in Sources */,
 				3D3FA9D5205FF1DC000A4297 /* ActiviteDAO.swift in Sources */,
 			);
