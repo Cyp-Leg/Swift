@@ -7,13 +7,37 @@
 //
 
 import UIKit
+import CoreData
 
 class CoachViewController: UIViewController {
 
     @IBAction func validateActivite(_ sender: Any) {
     }
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var heureLabel: UILabel!
+    @IBOutlet weak var nomActLabel: UILabel!
+    
+    var activites: [Activite] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            /*            self.alertError(errorMsg: "Could not load data", UserInfo: "Unknown reason")
+             */    return
+            
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        
+        dateLabel.text = Date().format()
+        let request : NSFetchRequest<Activite> = Activite.fetchRequest()
+        do{
+            try self.activites = context.fetch(request)
+        }
+        catch let error as NSError{
+            fatalError("cannot reach data: "+error.description)
+            
+        }
 
         // Do any additional setup after loading the view.
     }

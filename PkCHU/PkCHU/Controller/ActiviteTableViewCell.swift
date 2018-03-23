@@ -12,8 +12,8 @@ class ActiviteTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nomActiviteLabel: UILabel!
     
-    @IBOutlet weak var dateActiviteLabel: UILabel!
-     
+    @IBOutlet weak var descriptionActiviteLabel: UILabel!
+    
     @IBOutlet weak var heureActiviteLabel: UILabel!
     
     override func awakeFromNib() {

@@ -7,13 +7,32 @@
 //
 
 import UIKit
+import CoreData
 
 class ActivitiesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var activites: [Activite] = []
 
     @IBOutlet weak var activiteTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            /*            self.alertError(errorMsg: "Could not load data", UserInfo: "Unknown reason")
+             */    return
+            
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request : NSFetchRequest<Activite> = Activite.fetchRequest()
+        do{
+            try self.activites = context.fetch(request)
+        }
+        catch let error as NSError{
+            fatalError("cannot reach data: "+error.description)
+            
+        }
+
 
         // Do any additional setup after loading the view.
     }
@@ -23,16 +42,24 @@ class ActivitiesViewController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 // A modifier avec le nb d'activités ds datacore
+    // MARK: - Table view data source
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return self.activites.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = self.activiteTable.dequeueReusableCell(withIdentifier: "activiteCell", for: indexPath) as! ActiviteTableViewCell
-        cell.nomActiviteLabel.text = "test"
+        cell.nomActiviteLabel.text = self.activites[indexPath.row].libelle
+        cell.descriptionActiviteLabel.text = self.activites[indexPath.row].descript
+        cell.heureActiviteLabel.text = self.activites[indexPath.row].heureDebut
         return cell
     }
-
     /*
     // MARK: - Navigation
 
