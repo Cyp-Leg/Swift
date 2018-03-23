@@ -34,6 +34,11 @@ class HomeViewController: UIViewController {
                 Evenement.save()
             }
         }
+        else if let controller = sender.source as? AjoutActiviteViewController{
+            if controller.activite != nil{
+                Activite.save()
+            }
+        }
     }
 
     /*
