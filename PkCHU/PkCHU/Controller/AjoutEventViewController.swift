@@ -10,31 +10,43 @@ import UIKit
 
 class AjoutEventViewController: UIViewController {
 
+    @IBOutlet weak var somnoBtn: UIButton!
+    @IBOutlet weak var chuteBtn: UIButton!
+    @IBOutlet weak var halluBtn: UIButton!
+    @IBOutlet weak var dispersBtn: UIButton!
+    @IBOutlet weak var bolusBtn: UIButton!
+    
+    var dateEvent: NSDate = NSDate()
+    var event: EvenementModel?
+    
+    @IBAction func selectEventAction(_ sender: Any) {
+        if sender as? UIButton == self.somnoBtn {
+            event = EvenementModel(type: "Somnolence", date: dateEvent)
+        } else if sender as? UIButton == self.chuteBtn {
+            event = EvenementModel(type: "Chute", date: dateEvent)
+        } else if sender as? UIButton == self.halluBtn {
+            event = EvenementModel(type: "Hallucination", date: dateEvent)
+        }  else if sender as? UIButton == self.dispersBtn {
+            event = EvenementModel(type: "Prise de dispersibles", date: dateEvent)
+        }else {
+            event = EvenementModel(type: "Bolus d'Apollon", date: dateEvent)
+        }
+        performSegue(withIdentifier: "validEvent", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
     }
 
     /*

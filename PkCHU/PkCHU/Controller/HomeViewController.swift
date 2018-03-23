@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController {
 
@@ -24,10 +25,13 @@ class HomeViewController: UIViewController {
     
     @IBAction func unwindToHome(sender: UIStoryboardSegue){
         if let controller = sender.source as? SymptomesViewController{
-            if let _ = controller.symptome{
+            if controller.symptome != nil{
                 Symptome.save()
-                print(controller.symptome?.type)
-                print(controller.symptome?.date)
+            }
+        }
+        else if let controller = sender.source as? AjoutEventViewController{
+            if controller.event != nil{
+                Evenement.save()
             }
         }
     }

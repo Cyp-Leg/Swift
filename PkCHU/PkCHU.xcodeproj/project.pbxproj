@@ -38,6 +38,7 @@
 		3D4F99092046A96800307C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F99072046A96800307C66 /* LaunchScreen.storyboard */; };
 		3D4F99142046A96800307C66 /* PkCHUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F99132046A96800307C66 /* PkCHUTests.swift */; };
 		3D4F991F2046A96800307C66 /* PkCHUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F991E2046A96800307C66 /* PkCHUUITests.swift */; };
+		3D5332442064F0E700207C30 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5332432064F0E700207C30 /* EventTableViewCell.swift */; };
 		3D5D20EF205EAAFB005FEA27 /* TraitementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D20EE205EAAFB005FEA27 /* TraitementViewController.swift */; };
 		3D5D20F1205EB6E2005FEA27 /* AjoutTraitementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D20F0205EB6E2005FEA27 /* AjoutTraitementViewController.swift */; };
 		3D5D20F3205EBA5D005FEA27 /* OrdonnanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D20F2205EBA5D005FEA27 /* OrdonnanceViewController.swift */; };
@@ -112,6 +113,7 @@
 		3D4F991A2046A96800307C66 /* PkCHUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PkCHUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4F991E2046A96800307C66 /* PkCHUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PkCHUUITests.swift; sourceTree = "<group>"; };
 		3D4F99202046A96800307C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D5332432064F0E700207C30 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		3D5D20EE205EAAFB005FEA27 /* TraitementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitementViewController.swift; sourceTree = "<group>"; };
 		3D5D20F0205EB6E2005FEA27 /* AjoutTraitementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutTraitementViewController.swift; sourceTree = "<group>"; };
 		3D5D20F2205EBA5D005FEA27 /* OrdonnanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdonnanceViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				3DAE8258206139FD0057936E /* EventsViewController.swift */,
 				3DAE825A20613E310057936E /* AjoutEventViewController.swift */,
 				3D49CEA02062C78A00C20C99 /* SymptomeTableViewCell.swift */,
+				3D5332432064F0E700207C30 /* EventTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				3DE9246220592B670097C6B5 /* CoachViewController.swift in Sources */,
 				3D06F2652060654300E50E9E /* SpecialiteModel.swift in Sources */,
 				3D06F2672060659A00E50E9E /* SpecialiteDAO.swift in Sources */,
+				3D5332442064F0E700207C30 /* EventTableViewCell.swift in Sources */,
 				3D3FA9D1205FC324000A4297 /* TabSyntheseViewController.swift in Sources */,
 				3D06F25120605D5B00E50E9E /* OrdonnanceModel.swift in Sources */,
 				3D06F2592060609800E50E9E /* PriseModel.swift in Sources */,

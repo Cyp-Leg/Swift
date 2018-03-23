@@ -10,24 +10,13 @@ import Foundation
 import UIKit
 import CoreData
 
-class TabSyntheseViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
+class TabSyntheseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var symptomes : [Symptome] = []
 
     @IBOutlet weak var symptomeTable: UITableView!
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = self.symptomeTable.dequeueReusableCell(withIdentifier: "symptomeCell", for: indexPath) as! SymptomeTableViewCell
-        let date = self.symptomes[indexPath.row].date! as Date
-        cell.dateLabel.text = date.format()
-        cell.symptomeLabel.text = self.symptomes[indexPath.row].type
-        return cell
-    }
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.symptomes.count
-    }
     
     /*@IBAction func unwindToSynthese(sender: UIStoryboardSegue){
        /* if let controller = sender.source as? SymptomesViewController{
@@ -73,8 +62,21 @@ class TabSyntheseViewController: UIViewController , UITableViewDataSource, UITab
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return self.symptomes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = self.symptomeTable.dequeueReusableCell(withIdentifier: "symptomeCell", for: indexPath) as! SymptomeTableViewCell
+        let date = self.symptomes[indexPath.row].date! as Date
+        cell.dateLabel.text = date.format()
+        cell.symptomeLabel.text = self.symptomes[indexPath.row].type
+        return cell
+    }
+
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
