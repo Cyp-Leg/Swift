@@ -30,4 +30,12 @@ extension Activite{
     static func create() -> Activite{
         return Activite(context: CoreDataManager.context)
     }
+    
+    static func delete(object: Activite){
+        do{
+            try CoreDataManager.delete(object: object)
+        }catch let error as NSError{
+            fatalError("cannot save data: "+error.description)
+        }
+    }
 }

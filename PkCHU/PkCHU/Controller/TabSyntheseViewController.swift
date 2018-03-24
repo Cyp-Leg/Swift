@@ -39,6 +39,9 @@ class TabSyntheseViewController: UIViewController, UITableViewDataSource, UITabl
         let context = appDelegate.persistentContainer.viewContext
         
         let request : NSFetchRequest<Symptome> = Symptome.fetchRequest()
+        let current = (Calendar.current as NSCalendar).date(byAdding: .day, value: -5, to: Date(), options: [])! as NSDate
+        request.predicate = NSPredicate(format: "date > %@", current)
+        request.sortDescriptors = [NSSortDescriptor(key: ("date"), ascending: true)]
         do{
             try self.symptomes = context.fetch(request)
         }

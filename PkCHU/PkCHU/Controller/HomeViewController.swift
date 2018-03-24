@@ -39,6 +39,9 @@ class HomeViewController: UIViewController {
                 Activite.save()
             }
         }
+        else if let controller = sender.source as? ActivitiesViewController{
+            //cas suppression
+        }
         else if let controller = sender.source as? AjoutProfessionnelViewController{
             if controller.professionnel != nil{
                 Professionnel.save()

@@ -31,6 +31,8 @@ class CoachViewController: UIViewController {
         
         dateLabel.text = Date().format()
         let request : NSFetchRequest<Activite> = Activite.fetchRequest()
+        let current = (Calendar.current as NSCalendar).date(byAdding: .day, value: 0, to: Date(), options: [])! as NSDate
+        request.predicate = NSPredicate(format: "date > %@", current)
         let sort = NSSortDescriptor(key: "heureDebut", ascending: true)
         request.sortDescriptors = [sort]
         do{
@@ -39,9 +41,14 @@ class CoachViewController: UIViewController {
         catch let error as NSError{
             fatalError("cannot reach data: "+error.description)
         }
-        heureLabel.text = activites[0].heureDebut
-        nomActLabel.text = activites[0].descript
-
+        if (activites.count > 0) {
+            heureLabel.text = activites[0].heureDebut
+            nomActLabel.text = activites[0].libelle
+        }
+        else {
+            heureLabel.text = "Aucune"
+            nomActLabel.text = "activité prévue !"
+        }
         /*let predicate: NSPredicate
         if (let heureDebut = Activite.heureDebut){
             

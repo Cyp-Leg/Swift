@@ -15,6 +15,10 @@ class ActivitiesViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet weak var activiteTable: UITableView!
     
+    @IBAction func delBtn(_ sender: Any) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {

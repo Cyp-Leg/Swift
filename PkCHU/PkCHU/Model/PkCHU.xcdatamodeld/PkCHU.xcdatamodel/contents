@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1212" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="heureDebut" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
@@ -63,7 +64,7 @@
         <relationship name="posseder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Patient" inverseName="posseder" inverseEntity="Patient" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activite" positionX="-162" positionY="-126" width="128" height="120"/>
+        <element name="Activite" positionX="-162" positionY="-126" width="128" height="135"/>
         <element name="Evenement" positionX="-369" positionY="-81" width="128" height="88"/>
         <element name="Medicament" positionX="-324" positionY="245" width="128" height="103"/>
         <element name="Ordonnance" positionX="-173" positionY="425" width="128" height="103"/>
