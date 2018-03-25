@@ -1653,6 +1653,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RME-5D-seU">
+                                <rect key="frame" x="16" y="481" width="178" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="Cru-OG-hIw"/>
+                                    <constraint firstAttribute="height" constant="49" id="iFc-Yn-sPm"/>
+                                </constraints>
+                                <state key="normal" title="Ajouter"/>
+                                <connections>
+                                    <segue destination="EUw-Bj-AMz" kind="show" id="TWM-cV-cmG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0v-Ez-dKk">
+                                <rect key="frame" x="16" y="565" width="343" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="eFi-q7-FJE"/>
+                                </constraints>
+                                <state key="normal" title="Accueil"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="hmb-o1-8u3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-cU-TA8">
+                                <rect key="frame" x="202" y="481" width="157" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="zHp-f9-56Q"/>
+                                </constraints>
+                                <state key="normal" title="Supprimer"/>
+                                <connections>
+                                    <action selector="deleteRdv:" destination="aoC-0K-AqP" eventType="touchUpInside" id="WGL-iK-Lon"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gor-5O-xMZ">
                                 <rect key="frame" x="16" y="77" width="343" height="377"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1717,38 +1748,11 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aoC-0K-AqP" id="VFX-Fe-eZT"/>
+                                    <outlet property="delegate" destination="aoC-0K-AqP" id="YJU-Cr-jlV"/>
+                                </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RME-5D-seU">
-                                <rect key="frame" x="16" y="481" width="178" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="Cru-OG-hIw"/>
-                                    <constraint firstAttribute="height" constant="49" id="iFc-Yn-sPm"/>
-                                </constraints>
-                                <state key="normal" title="Ajouter"/>
-                                <connections>
-                                    <segue destination="EUw-Bj-AMz" kind="show" id="TWM-cV-cmG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0v-Ez-dKk">
-                                <rect key="frame" x="16" y="565" width="343" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="eFi-q7-FJE"/>
-                                </constraints>
-                                <state key="normal" title="Accueil"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="hmb-o1-8u3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-cU-TA8">
-                                <rect key="frame" x="202" y="481" width="157" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="zHp-f9-56Q"/>
-                                </constraints>
-                                <state key="normal" title="Supprimer"/>
-                                <connections>
-                                    <action selector="deleteRdv:" destination="aoC-0K-AqP" eventType="touchUpInside" id="WGL-iK-Lon"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.98783558010000005" blue="0.71727247640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -2089,7 +2093,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hnU-B5-Sb6"/>
+        <segue reference="Up5-8Z-Q1g"/>
         <segue reference="5Xh-qF-tqu"/>
         <segue reference="jqr-NE-6ic"/>
         <segue reference="qZd-Jr-LMY"/>
