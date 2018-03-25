@@ -56,6 +56,7 @@ class ListeMedecinsViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = self.medecinTab.dequeueReusableCell(withIdentifier: "medCell", for: indexPath) as! MedecinTableViewCell
         cell.nomLabel.text = self.professionnels[indexPath.row].nom
+        cell.speLabel.text = self.professionnels[indexPath.row].posseder?.libelle
         return cell
     }
     /*

@@ -11,7 +11,8 @@ import UIKit
 class MedecinTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nomLabel: UILabel!
-        
+    @IBOutlet weak var speLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -48,20 +48,34 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spécialité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79x-Jb-pd9">
+                                                    <rect key="frame" x="171" y="12" width="157" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="a6I-Wa-4b9" firstAttribute="top" secondItem="bL8-K1-Qe7" secondAttribute="top" constant="12" id="CWm-OE-bq4"/>
                                                 <constraint firstItem="a6I-Wa-4b9" firstAttribute="bottom" secondItem="bL8-K1-Qe7" secondAttribute="bottomMargin" id="Mon-nk-v6p"/>
+                                                <constraint firstItem="79x-Jb-pd9" firstAttribute="leading" secondItem="bL8-K1-Qe7" secondAttribute="leadingMargin" constant="156" id="TWW-Eg-2Jf"/>
                                                 <constraint firstItem="a6I-Wa-4b9" firstAttribute="leading" secondItem="bL8-K1-Qe7" secondAttribute="leading" constant="15" id="WBu-w5-efp"/>
                                                 <constraint firstItem="a6I-Wa-4b9" firstAttribute="top" secondItem="bL8-K1-Qe7" secondAttribute="topMargin" constant="1" id="mfi-dO-tLI"/>
                                                 <constraint firstAttribute="trailing" secondItem="a6I-Wa-4b9" secondAttribute="trailing" id="tAq-oU-1T3"/>
+                                                <constraint firstItem="79x-Jb-pd9" firstAttribute="top" secondItem="bL8-K1-Qe7" secondAttribute="topMargin" constant="1" id="vsK-kA-SxJ"/>
+                                                <constraint firstItem="79x-Jb-pd9" firstAttribute="trailing" secondItem="bL8-K1-Qe7" secondAttribute="trailingMargin" id="zNV-nR-4FQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nomLabel" destination="a6I-Wa-4b9" id="epa-oE-zRj"/>
+                                            <outlet property="speLabel" destination="79x-Jb-pd9" id="d51-o5-Muh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="n4G-Ov-vnq" id="ldy-fQ-uEp"/>
+                                    <outlet property="delegate" destination="n4G-Ov-vnq" id="TqW-Hq-oMt"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
