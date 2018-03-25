@@ -32,8 +32,7 @@ class MedicamentModel{
     }
     
     init(nom : String, dose : Float){
-        let entity = CoreDataManager.entity(forName: "Medicament")
-        self.dao = Medicament(entity: entity, insertInto: CoreDataManager.context)
+        self.dao = Medicament.create()
         self.dao.nom=nom
         self.dao.dose=dose
     }

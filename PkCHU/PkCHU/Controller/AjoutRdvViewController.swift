@@ -14,10 +14,16 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
    
     @IBOutlet weak var proPicker: UIPickerView!
     
-    @IBAction func addRdv(_ sender: Any) {
-    }
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var libelleTextField: UITextField!
+    
+    var rdv: RdvModel?
     
     var professionnels: [Professionnel] = []
+    var professionnel: Professionnel?
+    var dateRdv: Date!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +36,10 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
              */    return
             
         }
+        
+        self.dateRdv = datePicker.date
+
+        
         let context = appDelegate.persistentContainer.viewContext
         
         let request : NSFetchRequest<Professionnel> = Professionnel.fetchRequest()
@@ -50,7 +60,13 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func addRdv(_ sender: Any) {
+        if (libelleTextField.text != nil) {
+            rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, professionnel: professionnel!)
+            performSegue(withIdentifier: "validRdv", sender: self)
+        }
+    }
+    
     // MARK: - Picker view data source
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -64,6 +80,11 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let profObj = self.professionnels[row] as Professionnel
         return profObj.nom
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        professionnel = professionnels[row]
     }
     /*
     // MARK: - Navigation

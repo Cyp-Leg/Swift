@@ -31,10 +31,20 @@ class RdvModel{
         }
     }
     
-    init(date : NSDate, libelle : String){
-        let entity = CoreDataManager.entity(forName: "Rdv")
-        self.dao = Rdv(entity: entity, insertInto: CoreDataManager.context)
+    
+    private var professionnelModel : Professionnel
+    
+    var professionnel: Professionnel{
+        get{
+            return self.professionnelModel
+        }
+    }
+    
+    init(date : NSDate, libelle : String, professionnel: Professionnel){
+        self.dao = Rdv.create()
         self.dao.date=date
         self.dao.libelle=libelle
+        self.professionnelModel = professionnel
+        self.dao.concerner = professionnel
     }
 }

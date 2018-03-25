@@ -32,8 +32,7 @@ class OrdonnanceModel{
     }
     
     init(date : NSDate, commentaire : String){
-        let entity = CoreDataManager.entity(forName: "Ordonnance")
-        self.dao = Ordonnance(entity: entity, insertInto: CoreDataManager.context)
+        self.dao = Ordonnance.create()
         self.dao.date=date
         self.dao.commentaire=commentaire
     }

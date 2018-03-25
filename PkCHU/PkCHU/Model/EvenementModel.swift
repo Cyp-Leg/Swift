@@ -32,8 +32,7 @@ class EvenementModel{
     }
     
     init(type : String, date : NSDate){
-        let entity = CoreDataManager.entity(forName: "Evenement")
-        self.dao = Evenement(entity: entity, insertInto: CoreDataManager.context)
+        self.dao = Evenement.create()
         self.dao.type=type
         self.dao.date=date
     }

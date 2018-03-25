@@ -40,11 +40,20 @@ class ProfessionnelModel{
         }
     }
     
-    init(nom : String, prenom : String, adresseCabinet : String){
-        let entity = CoreDataManager.entity(forName: "Professionnel")
-        self.dao = Professionnel(entity: entity, insertInto: CoreDataManager.context)
+    private var specialiteModel : Specialite
+    
+    var specialite: Specialite{
+        get{
+            return self.specialiteModel
+        }
+    }
+    
+    init(nom : String, prenom : String, adresseCabinet : String, specialite: Specialite){
+        self.dao = Professionnel.create()
         self.dao.nom=nom
         self.dao.prenom=prenom
         self.dao.adresseCabinet=adresseCabinet
+        self.specialiteModel = specialite
+        self.dao.posseder = specialite
     }
 }

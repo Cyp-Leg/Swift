@@ -50,8 +50,7 @@ class ActiviteModel{
     }
     
     init(libelle : String, descript : String, recurrence : String, heureDebut : String){
-        let entity = CoreDataManager.entity(forName: "Activite")
-        self.dao = Activite(entity: entity, insertInto: CoreDataManager.context)
+        self.dao = Activite.create()
         self.dao.libelle=libelle
         self.dao.descript=descript
         self.dao.recurrence=recurrence

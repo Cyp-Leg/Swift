@@ -23,8 +23,7 @@ class SpecialiteModel{
     }
     
     init(libelle : String){
-        let entity = CoreDataManager.entity(forName: "Specialite")
-        self.dao = Specialite(entity: entity, insertInto: CoreDataManager.context)
+        self.dao = Specialite.create()
         self.dao.libelle=libelle
     }
 }

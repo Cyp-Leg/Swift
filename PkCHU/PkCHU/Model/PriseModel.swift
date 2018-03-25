@@ -50,8 +50,7 @@ class PriseModel{
     }
     
     init(commentaire : String, heure : String, quantite : Int32, recurrence: String){
-        let entity = CoreDataManager.entity(forName: "Prise")
-        self.dao = Prise(entity: entity, insertInto: CoreDataManager.context)
+        self.dao = Prise.create()
         self.dao.commentaire=commentaire
         self.dao.heure=heure
         self.quantite=quantite

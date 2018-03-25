@@ -14,6 +14,42 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       /* SpecialiteModel(libelle: "Kinésithérapeute")
+        Specialite.save()
+        SpecialiteModel(libelle: "Orthophoniste")
+        Specialite.save()
+        SpecialiteModel(libelle: "Infirmier")
+        Specialite.save()
+        SpecialiteModel(libelle: "Psychologue clinicien")
+        Specialite.save()
+        SpecialiteModel(libelle: "Neuropsychologue")
+        Specialite.save()
+        SpecialiteModel(libelle: "Ergothérapeute")
+        Specialite.save()
+        SpecialiteModel(libelle: "Psychomotricien")
+        Specialite.save()
+        SpecialiteModel(libelle: "Pédicure-podologue")
+        Specialite.save()
+        SpecialiteModel(libelle: "Diététicien(ne)")
+        Specialite.save()
+        SpecialiteModel(libelle: "Autre")
+        Specialite.save()
+        SpecialiteModel(libelle: "Neurologue")
+        Specialite.save()
+        SpecialiteModel(libelle: "Médecin généraliste")
+        Specialite.save()
+        SpecialiteModel(libelle: "Psychiatre")
+        Specialite.save()
+        SpecialiteModel(libelle: "Neurochirurgien")
+        Specialite.save()
+        SpecialiteModel(libelle: "Médecin de structure antidouleur")
+        Specialite.save()
+        SpecialiteModel(libelle: "Gériatre")
+        Specialite.save()
+        SpecialiteModel(libelle: "Médecin spécialiste en médecine")
+        Specialite.save()
+        SpecialiteModel(libelle: "Orthoptiste")
+         Specialite.save()*/
 
         // Do any additional setup after loading the view.
     }
@@ -45,6 +81,14 @@ class HomeViewController: UIViewController {
         else if let controller = sender.source as? AjoutProfessionnelViewController{
             if controller.professionnel != nil{
                 Professionnel.save()
+            }
+        }
+        else if let controller = sender.source as? AjoutRdvViewController{
+            if controller.rdv != nil{
+                print(controller.rdv?.date)
+                print(controller.rdv?.libelle)
+                print(controller.rdv?.professionnel)
+                Rdv.save()
             }
         }
     }

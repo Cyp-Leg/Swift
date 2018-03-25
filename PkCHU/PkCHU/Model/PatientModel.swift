@@ -32,8 +32,7 @@ class PatientModel{
     }
     
     init(nom : String, prenom : String){
-        let entity = CoreDataManager.entity(forName: "Patient")
-        self.dao = Patient(entity: entity, insertInto: CoreDataManager.context)
+        self.dao = Patient.create()
         self.dao.nom=nom
         self.dao.prenom=prenom
     }
