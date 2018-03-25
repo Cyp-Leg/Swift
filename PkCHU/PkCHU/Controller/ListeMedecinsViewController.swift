@@ -1,24 +1,22 @@
 //
-//  RdvViewController.swift
+//  ListeMedecinsViewController.swift
 //  PkCHU
 //
-//  Created by cyp on 14/03/2018.
+//  Created by Cyprien on 25/03/2018.
 //  Copyright © 2018 cyp. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    @IBOutlet weak var rdvTab: UITableView!
-    @IBAction func deleteRdv(_ sender: Any) {
-    }
+class ListeMedecinsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var rdv: [Rdv] = []
+    var professionnels : [Professionnel] = []
+
+    @IBOutlet weak var medecinTab: UITableView!
+    
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             /*            self.alertError(errorMsg: "Could not load data", UserInfo: "Unknown reason")
@@ -27,14 +25,15 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
         let context = appDelegate.persistentContainer.viewContext
         
-        let request : NSFetchRequest<Rdv> = Rdv.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: ("date"), ascending: true)]
+        let request : NSFetchRequest<Professionnel> = Professionnel.fetchRequest()
         do{
-            try self.rdv = context.fetch(request)
+            try self.professionnels = context.fetch(request)
         }
         catch let error as NSError{
             fatalError("cannot reach data: "+error.description)
+            
         }
+
         // Do any additional setup after loading the view.
     }
 
@@ -51,18 +50,14 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.rdv.count
+        return self.professionnels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = self.rdvTab.dequeueReusableCell(withIdentifier: "rdvCell", for: indexPath) as! RdvTableViewCell
-        let date = self.rdv[indexPath.row].date! as Date
-        cell.dateLabel.text = date.format()
-        cell.nomLabel.text = self.rdv[indexPath.row].concerner!.nom
-        cell.motifLabel.text = self.rdv[indexPath.row].libelle
+        let cell = self.medecinTab.dequeueReusableCell(withIdentifier: "medCell", for: indexPath) as! MedecinTableViewCell
+        cell.nomLabel.text = self.professionnels[indexPath.row].nom
         return cell
     }
-
     /*
     // MARK: - Navigation
 

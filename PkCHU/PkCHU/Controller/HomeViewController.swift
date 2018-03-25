@@ -85,9 +85,9 @@ class HomeViewController: UIViewController {
         }
         else if let controller = sender.source as? AjoutRdvViewController{
             if controller.rdv != nil{
-                print(controller.rdv?.date)
-                print(controller.rdv?.libelle)
-                print(controller.rdv?.professionnel)
+                print(controller.rdv?.date as Any)
+                print(controller.rdv?.libelle as Any)
+                print(controller.rdv?.professionnel.nom as Any)
                 Rdv.save()
             }
         }
