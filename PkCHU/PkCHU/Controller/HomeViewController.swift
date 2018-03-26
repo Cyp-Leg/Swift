@@ -11,45 +11,66 @@ import CoreData
 
 class HomeViewController: UIViewController {
 
+    var specialites: [Specialite] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       /* SpecialiteModel(libelle: "Kinésithérapeute")
-        Specialite.save()
-        SpecialiteModel(libelle: "Orthophoniste")
-        Specialite.save()
-        SpecialiteModel(libelle: "Infirmier")
-        Specialite.save()
-        SpecialiteModel(libelle: "Psychologue clinicien")
-        Specialite.save()
-        SpecialiteModel(libelle: "Neuropsychologue")
-        Specialite.save()
-        SpecialiteModel(libelle: "Ergothérapeute")
-        Specialite.save()
-        SpecialiteModel(libelle: "Psychomotricien")
-        Specialite.save()
-        SpecialiteModel(libelle: "Pédicure-podologue")
-        Specialite.save()
-        SpecialiteModel(libelle: "Diététicien(ne)")
-        Specialite.save()
-        SpecialiteModel(libelle: "Autre")
-        Specialite.save()
-        SpecialiteModel(libelle: "Neurologue")
-        Specialite.save()
-        SpecialiteModel(libelle: "Médecin généraliste")
-        Specialite.save()
-        SpecialiteModel(libelle: "Psychiatre")
-        Specialite.save()
-        SpecialiteModel(libelle: "Neurochirurgien")
-        Specialite.save()
-        SpecialiteModel(libelle: "Médecin de structure antidouleur")
-        Specialite.save()
-        SpecialiteModel(libelle: "Gériatre")
-        Specialite.save()
-        SpecialiteModel(libelle: "Médecin spécialiste en médecine")
-        Specialite.save()
-        SpecialiteModel(libelle: "Orthoptiste")
-         Specialite.save()*/
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            /*            self.alertError(errorMsg: "Could not load data", UserInfo: "Unknown reason")
+             */    return
+            
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request : NSFetchRequest<Specialite> = Specialite.fetchRequest()
+        let sort = NSSortDescriptor(key: "libelle", ascending: true)
+        request.sortDescriptors = [sort]
+        do{
+            try self.specialites = context.fetch(request)
+        }
+        catch let error as NSError{
+            fatalError("cannot reach data: "+error.description)
+            
+        }
+        if(specialites.count==0)
+        {
+            SpecialiteModel(libelle: "Kinésithérapeute")
+            Specialite.save()
+            SpecialiteModel(libelle: "Orthophoniste")
+            Specialite.save()
+            SpecialiteModel(libelle: "Infirmier")
+            Specialite.save()
+            SpecialiteModel(libelle: "Psychologue clinicien")
+            Specialite.save()
+            SpecialiteModel(libelle: "Neuropsychologue")
+            Specialite.save()
+            SpecialiteModel(libelle: "Ergothérapeute")
+            Specialite.save()
+            SpecialiteModel(libelle: "Psychomotricien")
+            Specialite.save()
+            SpecialiteModel(libelle: "Pédicure-podologue")
+            Specialite.save()
+            SpecialiteModel(libelle: "Diététicien(ne)")
+            Specialite.save()
+            SpecialiteModel(libelle: "Autre")
+            Specialite.save()
+            SpecialiteModel(libelle: "Neurologue")
+            Specialite.save()
+            SpecialiteModel(libelle: "Médecin généraliste")
+            Specialite.save()
+            SpecialiteModel(libelle: "Psychiatre")
+            Specialite.save()
+            SpecialiteModel(libelle: "Neurochirurgien")
+            Specialite.save()
+            SpecialiteModel(libelle: "Médecin de structure antidouleur")
+            Specialite.save()
+            SpecialiteModel(libelle: "Gériatre")
+            Specialite.save()
+            SpecialiteModel(libelle: "Médecin spécialiste en médecine")
+            Specialite.save()
+            SpecialiteModel(libelle: "Orthoptiste")
+            Specialite.save()
+        }
 
         // Do any additional setup after loading the view.
     }

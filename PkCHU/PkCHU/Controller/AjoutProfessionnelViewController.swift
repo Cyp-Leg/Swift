@@ -80,7 +80,9 @@ class AjoutProfessionnelViewController: UIViewController, UIPickerViewDelegate, 
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        specialite = specialites[row]
+        if(self.specialites.count>0){
+            specialite = specialites[row]
+        }
     }
     /*
     // MARK: - Navigation

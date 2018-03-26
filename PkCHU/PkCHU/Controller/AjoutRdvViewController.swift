@@ -67,6 +67,9 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
     
+    @IBAction func unwindToAddRdv(sender: UIStoryboardSegue){
+        }
+    
     // MARK: - Picker view data source
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -83,8 +86,9 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        professionnel = professionnels[row]
+        if(professionnels.count>0){
+            professionnel = professionnels[row]
+        }
     }
     /*
     // MARK: - Navigation

@@ -31,8 +31,8 @@ class CoachViewController: UIViewController {
         
         dateLabel.text = Date().format()
         let request : NSFetchRequest<Activite> = Activite.fetchRequest()
-        let current = (Calendar.current as NSCalendar).date(byAdding: .day, value: 0, to: Date(), options: [])! as NSDate
-        request.predicate = NSPredicate(format: "date > %@", current)
+        /*let current = (Calendar.current as NSCalendar).date(byAdding: .day, value: 0, to: Date(), options: [])! as NSDate
+        request.predicate = NSPredicate(format: "date > %@", current)*/
         let sort = NSSortDescriptor(key: "heureDebut", ascending: true)
         request.sortDescriptors = [sort]
         do{
