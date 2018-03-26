@@ -75,9 +75,9 @@ class HomeViewController: UIViewController {
                 Activite.save()
             }
         }
-        else if let controller = sender.source as? ActivitiesViewController{
+       /* else if let controller = sender.source as? ActivitiesViewController{
             //cas suppression
-        }
+        }*/
         else if let controller = sender.source as? AjoutProfessionnelViewController{
             if controller.professionnel != nil{
                 Professionnel.save()
@@ -85,10 +85,17 @@ class HomeViewController: UIViewController {
         }
         else if let controller = sender.source as? AjoutRdvViewController{
             if controller.rdv != nil{
-                print(controller.rdv?.date as Any)
-                print(controller.rdv?.libelle as Any)
-                print(controller.rdv?.professionnel.nom as Any)
                 Rdv.save()
+            }
+        }
+        else if let controller = sender.source as? AjoutMedicamentViewController{
+            if controller.medicament != nil{
+                Medicament.save()
+            }
+        }
+        else if let controller = sender.source as? AjoutTraitementViewController{
+            if controller.prise != nil{
+                Prise.save()
             }
         }
     }

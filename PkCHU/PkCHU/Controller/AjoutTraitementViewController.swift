@@ -7,91 +7,200 @@
 //
 
 import UIKit
+import UserNotifications
+import CoreData
 
-class AjoutTraitementViewController: UITableViewController {
-
+class AjoutTraitementViewController: UIViewController, UNUserNotificationCenterDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    
+    @IBOutlet weak var medPK: UIPickerView!
+    
+    @IBOutlet weak var hourPK: UIDatePicker!
+    
+    var medicaments: [Medicament] = []
+    var medicamentSelected: Medicament?
+    var selectedDate : String = ""
+    var prise: PriseModel?
+    
+    
     @IBAction func addTraitement(_ sender: Any) {
+        // ajout DAO
+        prise = PriseModel(heure : self.selectedDate, medicament: self.medicamentSelected!)
+        
+        
+        
+        
+        // Verifie les autorisations de notification
+        UNUserNotificationCenter.current().getNotificationSettings { (notificationSettings) in
+            switch notificationSettings.authorizationStatus {
+            case .notDetermined:
+                self.requestAuthorization(completionHandler: { (success) in
+                    guard success else { return }
+                    
+                    // Programme la notification
+                    self.scheduleLocalNotification()
+                })
+            case .authorized:
+                // Programme la notification
+                self.scheduleLocalNotification()
+            case .denied:
+                print("Application Not Allowed to Display Notifications")
+            }
+        }
+        performSegue(withIdentifier:"validPrise", sender: self)
+
+    }
+    
+    
+    // Demande autorisation et renvoie la reponse
+    private func requestAuthorization(completionHandler: @escaping (_ success: Bool) -> ()) {
+        // Demande autorisation de notification
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
+            if let error = error {
+                print("Request Authorization Failed (\(error), \(error.localizedDescription))")
+            }
+            
+            completionHandler(success)
+        }
+    }
+    
+    func afficheNotification()
+    {
+        let center = UNUserNotificationCenter.current()
+        
+        center.getPendingNotificationRequests(completionHandler: { requests in
+            for request in requests {
+                print(request.identifier)
+            }
+        })
+    }
+    //programme l'alarme
+    private func scheduleLocalNotification() {
+        // Create le contenu de la notif
+        let notificationContent = UNMutableNotificationContent()
+        
+        // Configure le contenu de la notif
+        DispatchQueue.main.async {
+            notificationContent.title = "C'est l'heure de votre médicament"
+        }
+        notificationContent.subtitle = self.selectedDate
+        notificationContent.body = " Medicament : " + (self.medicamentSelected?.nom)!
+        notificationContent.sound = UNNotificationSound.default()
+        // Ajoute le trigger
+        
+        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching:  Calendar.current.dateComponents([.minute, .hour], from: self.hourPK.date), repeats: false)
+        
+        // Creer la requete de notification
+        
+        let notificationRequest = UNNotificationRequest(identifier: "Rappel_Med", content: notificationContent, trigger: notificationTrigger)
+        
+        // Ajout de la requete dans le User Notification Center
+        
+        UNUserNotificationCenter.current().add(notificationRequest) { (error) in
+            if let error = error {
+                print("Unable to Add Notification Request (\(error), \(error.localizedDescription))")
+            }
+            UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+                
+                print("Requests: \(notificationRequest.identifier)")
+            }
+        }
+    }
+    
+    func datePickerValueChanged(_ sender: UIDatePicker){
+        
+        // Create date formatter
+        let dateFormatter: DateFormatter = DateFormatter()
+        
+        // Set date format
+        dateFormatter.dateFormat = "hh:mm a"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC+1") as TimeZone!
+        
+        // Apply date format
+        selectedDate = dateFormatter.string(from: sender.date)
+        
+        print("Selected value \(selectedDate)")
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // Configure le User Notification Center
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+        
+        // Connect data:
+        self.medPK.delegate = self
+        self.medPK.dataSource = self
+        
+        // Add an event to call onDidChangeDate function when value is changed.
+        hourPK.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
 
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            /*            self.alertError(errorMsg: "Could not load data", UserInfo: "Unknown reason")
+             */    return
+            
+        }
+        
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request : NSFetchRequest<Medicament> = Medicament.fetchRequest()
+        
+        do{
+            try self.medicaments = context.fetch(request)
+        }
+        catch let error as NSError{
+            fatalError("cannot reach data: "+error.description)
+            
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+    {
+        completionHandler(.alert)
+    }
+    
+    
+    // Catpure the picker view selection
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
+    
+    // The number of columns of data
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return medicaments.count
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let medObj = self.medicaments[row] as Medicament
+        return medObj.nom
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    // This method is triggered whenever the user makes a change to the picker selection.
+    // The parameter named row and component represents what was selected.
+    medicamentSelected = medicaments[row]
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+

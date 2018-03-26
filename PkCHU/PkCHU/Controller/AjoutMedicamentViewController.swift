@@ -8,10 +8,13 @@
 
 import UIKit
 
-class AjoutMedicamentViewController: UITableViewController {
+class AjoutMedicamentViewController: UIViewController {
 
-    @IBAction func AddMedicament(_ sender: Any) {
-    }
+    @IBOutlet weak var nomField: UITextField!
+    @IBOutlet weak var doseField: UITextField!
+    
+    var medicament: MedicamentModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,17 +30,18 @@ class AjoutMedicamentViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    
+    @IBAction func AddMedicament(_ sender: Any) {
+        if(nomField.text != nil && doseField.text != nil){
+            medicament = MedicamentModel(nom: nomField.text!, dose: (doseField.text! as NSString).floatValue)
+        }
+        
+        performSegue(withIdentifier: "validMed", sender: self)
+    }
+    
+    
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

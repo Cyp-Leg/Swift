@@ -12,15 +12,7 @@ import CoreData
 
 class PriseModel{
     private var dao : Prise
-    
-    var commentaire: String {
-        get{
-            return self.dao.commentaire!
-        }
-        set{
-            self.dao.commentaire = newValue
-        }
-    }
+
     
     var heure: String {
         get{
@@ -30,30 +22,19 @@ class PriseModel{
             self.dao.heure = newValue
         }
     }
+
+    private var medicModel: Medicament
     
-    var quantite: Int32 {
+    var medicament: Medicament{
         get{
-            return self.dao.quantite
-        }
-        set{
-            self.dao.quantite = newValue
+            return self.medicModel
         }
     }
     
-    var recurrence: String {
-        get{
-            return self.dao.recurrence!
-        }
-        set{
-            self.dao.recurrence = newValue
-        }
-    }
-    
-    init(commentaire : String, heure : String, quantite : Int32, recurrence: String){
+    init(heure : String, medicament: Medicament){
         self.dao = Prise.create()
-        self.dao.commentaire=commentaire
         self.dao.heure=heure
-        self.quantite=quantite
-        self.recurrence=recurrence
+        self.medicModel=medicament
+        self.dao.comprendre=medicament
     }
 }
