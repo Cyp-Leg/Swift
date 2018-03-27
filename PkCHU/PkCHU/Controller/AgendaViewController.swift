@@ -7,12 +7,40 @@
 //
 
 import UIKit
+import CoreData
 
 class AgendaViewController: UIViewController {
 
+    @IBOutlet weak var speLabel: UILabel!
+    @IBOutlet weak var drLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+
+    var rdv : [Rdv] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            /*            self.alertError(errorMsg: "Could not load data", UserInfo: "Unknown reason")
+             */    return
+            
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request : NSFetchRequest<Rdv> = Rdv.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: ("date"), ascending: true)]
+        do{
+            try self.rdv = context.fetch(request)
+        }
+        catch let error as NSError{
+            fatalError("cannot reach data: "+error.description)
+        }
 
+        if(rdv.count > 0)
+        {
+            self.drLabel.text = rdv[0].concerner!.nom! + rdv[0].concerner!.prenom!
+            self.speLabel.text = rdv[0].concerner?.posseder?.libelle
+            self.dateLabel.text = (rdv[0].date! as Date).format()
+        }
         // Do any additional setup after loading the view.
     }
 
