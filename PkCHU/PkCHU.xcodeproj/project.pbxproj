@@ -64,6 +64,7 @@
 		47946997206AAFF4006D676F /* InfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47946996206AAFF4006D676F /* InfosViewController.swift */; };
 		47946999206AB822006D676F /* Cup-gold-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47946998206AB821006D676F /* Cup-gold-icon.png */; };
 		87C5C76E20506275006BDABA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5C76D20506275006BDABA /* HomeViewController.swift */; };
+		87D41749206AC66800887902 /* Présentation1.png in Resources */ = {isa = PBXBuildFile; fileRef = 87D41748206AC66700887902 /* Présentation1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,8 @@
 		47946996206AAFF4006D676F /* InfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosViewController.swift; sourceTree = "<group>"; };
 		47946998206AB821006D676F /* Cup-gold-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cup-gold-icon.png"; sourceTree = SOURCE_ROOT; };
 		87C5C76D20506275006BDABA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		87D41748206AC66700887902 /* Présentation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Présentation1.png"; path = "../../../Desktop/Présentation1.png"; sourceTree = "<group>"; };
+		87D4174A206AC67100887902 /* Présentation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Présentation1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,7 @@
 		3D4F98EF2046A96700307C66 = {
 			isa = PBXGroup;
 			children = (
+				87D41748206AC66700887902 /* Présentation1.png */,
 				3D4F98FA2046A96700307C66 /* PkCHU */,
 				3D4F99122046A96800307C66 /* PkCHUTests */,
 				3D4F991D2046A96800307C66 /* PkCHUUITests */,
@@ -200,6 +204,7 @@
 				87C5C76C2050623E006BDABA /* Controller */,
 				3D6EF0C120556C2600D743A8 /* Model */,
 				3D4F98FB2046A96700307C66 /* AppDelegate.swift */,
+				87D4174A206AC67100887902 /* Présentation1.png */,
 				3D4F98FD2046A96700307C66 /* ViewController.swift */,
 				3D4F98FF2046A96700307C66 /* Main.storyboard */,
 				3D4F99052046A96800307C66 /* Assets.xcassets */,
@@ -404,6 +409,7 @@
 				3D4F99092046A96800307C66 /* LaunchScreen.storyboard in Resources */,
 				47946999206AB822006D676F /* Cup-gold-icon.png in Resources */,
 				3D4F99062046A96800307C66 /* Assets.xcassets in Resources */,
+				87D41749206AC66800887902 /* Présentation1.png in Resources */,
 				3D4F99012046A96700307C66 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

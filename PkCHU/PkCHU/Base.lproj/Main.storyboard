@@ -21,7 +21,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBt-DR-YH1">
                                 <rect key="frame" x="16" y="133" width="343" height="56"/>
-                                <color key="backgroundColor" red="0.98975874350000004" green="0.79395164389999995" blue="0.63140318360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.36590325342465752" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="m7t-0p-q7D"/>
                                 </constraints>
@@ -52,15 +52,13 @@
                                     <segue destination="sPf-tj-NnU" kind="show" id="a5F-H6-XpJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3i-D3-czX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3i-D3-czX">
                                 <rect key="frame" x="16" y="325" width="343" height="56"/>
                                 <color key="backgroundColor" red="0.68465762441394384" green="0.81949011333420085" blue="0.9381274287564767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="BtQ-ma-Shd"/>
                                 </constraints>
-                                <state key="normal" title="Mes Symptômes">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Mes Symptômes"/>
                                 <connections>
                                     <segue destination="MjD-Df-uhU" kind="show" id="Cg0-FK-Yi1"/>
                                 </connections>
@@ -71,9 +69,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="FMp-kF-fTZ"/>
                                 </constraints>
-                                <state key="normal" title="Mes événements">
-                                    <color key="titleColor" red="1" green="0.1634348793" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Mes événements"/>
                                 <connections>
                                     <segue destination="ZH0-Iv-oQH" kind="show" id="jdb-NP-3SV"/>
                                 </connections>
@@ -98,7 +94,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.98783558014913064" blue="0.71727247640960201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75551155821917804" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="i3i-D3-czX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3lS-Bx-vIL"/>
                             <constraint firstItem="Jzf-DF-y0v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3nJ-Xo-1zu"/>
