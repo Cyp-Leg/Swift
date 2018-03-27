@@ -869,7 +869,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Félicitations ! Vous avez atteint votre objectif, continuez comme ça !" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Ox-uM-LCc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Félicitations ! Vous avez atteint votre objectif, continuez comme ça !" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Ox-uM-LCc">
                                 <rect key="frame" x="16" y="498" width="343" height="67"/>
                                 <color key="backgroundColor" red="1" green="0.98783558010000005" blue="0.71727247640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -879,10 +879,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpa-UY-zJ3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpa-UY-zJ3">
                                 <rect key="frame" x="16" y="598" width="343" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.69608778940000005" green="0.9381274288" blue="0.69423028799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="7ts-d8-HIs"/>
+                                </constraints>
                                 <state key="normal" title="Accueil">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -890,14 +892,27 @@
                                     <action selector="accueilBtn:" destination="7WJ-WE-GuQ" eventType="touchUpInside" id="E5F-8L-Kct"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cup-gold-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="XWH-sA-UOI">
+                                <rect key="frame" x="16" y="77" width="343" height="413"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="413" id="ao2-Ia-Ggs"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.98783558010000005" blue="0.71727247640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Dpa-UY-zJ3" firstAttribute="leading" secondItem="I7i-DZ-8Q3" secondAttribute="leading" constant="16" id="BnX-ag-j6L"/>
                             <constraint firstItem="I7i-DZ-8Q3" firstAttribute="trailing" secondItem="e2W-rZ-T9Z" secondAttribute="trailing" constant="16" id="DZ3-Ro-H80"/>
                             <constraint firstItem="e2W-rZ-T9Z" firstAttribute="leading" secondItem="I7i-DZ-8Q3" secondAttribute="leading" constant="16" id="HMN-aA-LWP"/>
                             <constraint firstItem="9Ox-uM-LCc" firstAttribute="leading" secondItem="I7i-DZ-8Q3" secondAttribute="leading" constant="16" id="IuZ-OO-dl3"/>
+                            <constraint firstItem="XWH-sA-UOI" firstAttribute="top" secondItem="e2W-rZ-T9Z" secondAttribute="bottom" constant="8" id="QNF-Zt-nrd"/>
+                            <constraint firstItem="I7i-DZ-8Q3" firstAttribute="trailing" secondItem="XWH-sA-UOI" secondAttribute="trailing" constant="16" id="Y3m-He-gjw"/>
+                            <constraint firstItem="I7i-DZ-8Q3" firstAttribute="bottom" secondItem="Dpa-UY-zJ3" secondAttribute="bottom" constant="20" id="bzc-jj-PMM"/>
                             <constraint firstItem="e2W-rZ-T9Z" firstAttribute="top" secondItem="I7i-DZ-8Q3" secondAttribute="top" id="rx1-x9-2VB"/>
+                            <constraint firstItem="XWH-sA-UOI" firstAttribute="leading" secondItem="I7i-DZ-8Q3" secondAttribute="leading" constant="16" id="ueR-Qs-RPh"/>
                             <constraint firstItem="I7i-DZ-8Q3" firstAttribute="trailing" secondItem="9Ox-uM-LCc" secondAttribute="trailing" constant="16" id="uy4-yu-90R"/>
+                            <constraint firstItem="9Ox-uM-LCc" firstAttribute="top" secondItem="XWH-sA-UOI" secondAttribute="bottom" constant="8" id="wCp-gB-0N3"/>
+                            <constraint firstItem="I7i-DZ-8Q3" firstAttribute="trailing" secondItem="Dpa-UY-zJ3" secondAttribute="trailing" constant="16" id="yRL-vF-q6V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I7i-DZ-8Q3"/>
                     </view>
@@ -2270,6 +2285,9 @@
             <point key="canvasLocation" x="-401" y="117"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cup-gold-icon.png" width="256" height="256"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hnU-B5-Sb6"/>
         <segue reference="5Xh-qF-tqu"/>

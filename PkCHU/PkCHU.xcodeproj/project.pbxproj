@@ -62,6 +62,7 @@
 		474E14092068001C00A5DEA6 /* ListeMedecinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E14082068001C00A5DEA6 /* ListeMedecinsViewController.swift */; };
 		474E140B2068017500A5DEA6 /* MedecinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E140A2068017500A5DEA6 /* MedecinTableViewCell.swift */; };
 		47946997206AAFF4006D676F /* InfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47946996206AAFF4006D676F /* InfosViewController.swift */; };
+		47946999206AB822006D676F /* Cup-gold-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47946998206AB821006D676F /* Cup-gold-icon.png */; };
 		87C5C76E20506275006BDABA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5C76D20506275006BDABA /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,7 @@
 		474E14082068001C00A5DEA6 /* ListeMedecinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeMedecinsViewController.swift; sourceTree = "<group>"; };
 		474E140A2068017500A5DEA6 /* MedecinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecinTableViewCell.swift; sourceTree = "<group>"; };
 		47946996206AAFF4006D676F /* InfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosViewController.swift; sourceTree = "<group>"; };
+		47946998206AB821006D676F /* Cup-gold-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cup-gold-icon.png"; sourceTree = SOURCE_ROOT; };
 		87C5C76D20506275006BDABA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +230,7 @@
 		3D6EF0C120556C2600D743A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				47946998206AB821006D676F /* Cup-gold-icon.png */,
 				3D4F99022046A96800307C66 /* PkCHU.xcdatamodeld */,
 				3D28845B2056E5EA00302567 /* ActiviteModel.swift */,
 				3D3FA9D2205FF02D000A4297 /* CoreDataManager.swift */,
@@ -399,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4F99092046A96800307C66 /* LaunchScreen.storyboard in Resources */,
+				47946999206AB822006D676F /* Cup-gold-icon.png in Resources */,
 				3D4F99062046A96800307C66 /* Assets.xcassets in Resources */,
 				3D4F99012046A96700307C66 /* Main.storyboard in Resources */,
 			);
