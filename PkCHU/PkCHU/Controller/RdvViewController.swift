@@ -69,11 +69,43 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let date = self.rdv[indexPath.row].date! as Date
         cell.dateLabel.text = date.format()
         cell.nomLabel.text = self.rdv[indexPath.row].concerner!.nom
-        cell.motifLabel.text = self.rdv[indexPath.row].preparation!
-    //    cell.motifLabel.text = self.rdv[indexPath.row].preparation
+        if(self.rdv[indexPath.row].preparation != nil)
+        {
+            cell.motifLabel.text = self.rdv[indexPath.row].preparation!
+        }
+        else{
+            cell.motifLabel.text = "Aucune préparation"
+        }
         return cell
     }
 
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+    
+    // Override to support editing the table view.
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if (editingStyle == .delete) {
+    // Delete the row from the data source
+    // traitement.delete(priseToDelete: (traitement?.get(i: indexPath.row)!)!)
+    
+    rdvTab.beginUpdates()
+    Rdv.delete(object: self.rdv[indexPath.row])
+    Rdv.save()
+    rdvTab.deleteRows(at: [indexPath], with: .fade)
+    self.rdv.remove(at: indexPath.row)
+    rdvTab.endUpdates()
+    
+        self.rdvTab.reloadData();
+    
+    /* self.tableTraitement.beginUpdates()
+     self.tableTraitement.deleteRows(at: [indexPath], with: .automatic)
+     self.tableTraitement.endUpdates()*/
+        }
     /*
     // MARK: - Navigation
 
@@ -84,4 +116,5 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     */
 
+    }
 }

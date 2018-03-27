@@ -96,9 +96,12 @@ class TraitementViewController: UIViewController, UITableViewDataSource, UITable
      // Delete the row from the data source
     // traitement.delete(priseToDelete: (traitement?.get(i: indexPath.row)!)!)
         
+        tableTraitement.beginUpdates()
         Prise.delete(object: self.traitement[indexPath.row])
         Prise.save()
-        
+        tableTraitement.deleteRows(at: [indexPath], with: .fade)
+        self.traitement.remove(at: indexPath.row)
+        tableTraitement.endUpdates()
     
         self.tableTraitement.reloadData();
         

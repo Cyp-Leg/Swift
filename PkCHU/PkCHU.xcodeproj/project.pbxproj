@@ -148,7 +148,7 @@
 		47946996206AAFF4006D676F /* InfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosViewController.swift; sourceTree = "<group>"; };
 		47946998206AB821006D676F /* Cup-gold-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cup-gold-icon.png"; sourceTree = SOURCE_ROOT; };
 		87C5C76D20506275006BDABA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		87D41748206AC66700887902 /* Présentation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Présentation1.png"; path = "../../../Desktop/Présentation1.png"; sourceTree = "<group>"; };
+		87D41748206AC66700887902 /* Présentation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Présentation1.png"; path = "../../../Downloads/Présentation1.png"; sourceTree = "<group>"; };
 		87D4174A206AC67100887902 /* Présentation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Présentation1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

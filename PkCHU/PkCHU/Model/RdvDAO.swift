@@ -30,4 +30,12 @@ extension Rdv{
     static func create() -> Rdv{
         return Rdv(context: CoreDataManager.context)
     }
+    
+    static func delete(object: Rdv){
+        do{
+            try CoreDataManager.delete(object: object)
+        }catch let error as NSError{
+            fatalError("cannot save data: "+error.description)
+        }
+    }
 }
