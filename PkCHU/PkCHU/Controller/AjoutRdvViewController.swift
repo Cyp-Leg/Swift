@@ -32,11 +32,11 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     
     @IBAction func addRdv(_ sender: Any) {
-        // ajout dao
-        /*  if (libelleTextField.text != nil) {
+         //ajout dao
+         if (libelleTextField.text != nil) {
          rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, preparation: "", professionnel: professionnel!)
          performSegue(withIdentifier: "validRdv", sender: self)
-         } */
+         }
         
         // Verifie les autorisations de notification
         UNUserNotificationCenter.current().getNotificationSettings { (notificationSettings) in
@@ -79,7 +79,7 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         notificationContent.title = "Vous avez un rendez-vous dans une heure !"
         notificationContent.subtitle = self.selectedDate
-        notificationContent.body = "pro"
+        notificationContent.body = "Avec Dr. " + (professionnel?.nom)! + " au " + (professionnel?.adresseCabinet)!
         notificationContent.sound = UNNotificationSound.default()
         
         
@@ -238,6 +238,10 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         if(professionnels.count>0){
             professionnel = professionnels[row]
         }
+    }
+    
+    @IBAction func rdvDatePicker(_ sender: Any) {
+        dateRdv = datePicker.date
     }
     /*
      // MARK: - Navigation

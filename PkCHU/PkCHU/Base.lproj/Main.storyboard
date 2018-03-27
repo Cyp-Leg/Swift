@@ -2035,6 +2035,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="542720202.80842602">
                                     <!--2018-03-14 11:36:42 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="rdvDatePicker:" destination="EUw-Bj-AMz" eventType="valueChanged" id="W6F-n4-rLK"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.98783558010000005" blue="0.71727247640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

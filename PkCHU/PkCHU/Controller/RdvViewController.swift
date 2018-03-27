@@ -29,7 +29,7 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         let request : NSFetchRequest<Rdv> = Rdv.fetchRequest()
         /*let current = (Calendar.current as NSCalendar).date(byAdding: .day, value: 0, to: Date(), options: [])! as NSDate*/
-        /*request.predicate = NSPredicate(format: "date > %@", NSDate())*/
+        request.predicate = NSPredicate(format: "date > %@", NSDate())
         request.sortDescriptors = [NSSortDescriptor(key: ("date"), ascending: true)]
         do{
             try self.rdv = context.fetch(request)
@@ -69,6 +69,7 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let date = self.rdv[indexPath.row].date! as Date
         cell.dateLabel.text = date.format()
         cell.nomLabel.text = self.rdv[indexPath.row].concerner!.nom
+        cell.motifLabel.text = self.rdv[indexPath.row].libelle!
     //    cell.motifLabel.text = self.rdv[indexPath.row].preparation
         return cell
     }
