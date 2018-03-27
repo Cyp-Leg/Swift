@@ -25,17 +25,18 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var selectedDate : String = ""
     var hourSelected : Int = 0
     var minuteSelected : Int = 0
+    var daySelected : Int = 0
+    var monthSelected : Int = 0
+    var yearSelected : Int = 0
     var dateRdv: Date!
     
     
     @IBAction func addRdv(_ sender: Any) {
         // ajout dao
-        if (libelleTextField.text != nil) {
-            rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, preparation: "", professionnel: professionnel!)
-            performSegue(withIdentifier: "validRdv", sender: self)
-        }
-        
-        
+        /*  if (libelleTextField.text != nil) {
+         rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, preparation: "", professionnel: professionnel!)
+         performSegue(withIdentifier: "validRdv", sender: self)
+         } */
         
         // Verifie les autorisations de notification
         UNUserNotificationCenter.current().getNotificationSettings { (notificationSettings) in
@@ -73,17 +74,32 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     private func scheduleLocalNotification() {
         // Create le contenu de la notif
         let notificationContent = UNMutableNotificationContent()
-        
+        var dateComponents = DateComponents()
         // Configure le contenu de la notif
-        DispatchQueue.main.async {
-            notificationContent.title = "Vous avez un rendez-vous dans une heure !"
-        }
-        notificationContent.subtitle = self.selectedDate
-        notificationContent.body = " Professionnel "
-        notificationContent.sound = UNNotificationSound.default()
-        // Ajoute le trigger
         
-        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching:  Calendar.current.dateComponents([.day, .month, .year, .minute, .hour], from: self.datePicker.date), repeats: false)
+        notificationContent.title = "Vous avez un rendez-vous dans une heure !"
+        notificationContent.subtitle = self.selectedDate
+        notificationContent.body = "pro"
+        notificationContent.sound = UNNotificationSound.default()
+        
+        
+        print("Selected value \(selectedDate)")
+        print("Selected value \(hourSelected)")
+        print("Selected value \(minuteSelected)")
+        print("Selected value \(yearSelected)")
+        print("Selected value \(monthSelected)")
+        print("Selected value \(daySelected)")
+        
+        // Ajoute le trigger
+        dateComponents.weekday = self.daySelected
+        dateComponents.month = self.monthSelected
+        dateComponents.year = self.yearSelected
+        dateComponents.hour = self.hourSelected
+        dateComponents.minute = self.minuteSelected
+        
+        
+        //  let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching:  Calendar.current.dateComponents([.month, .year, .day, .minute, .hour], from: self.datePicker.date), repeats: false)
         
         // Creer la requete de notification
         
@@ -109,26 +125,44 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let dateFormatter: DateFormatter = DateFormatter()
         let hourFormatter: DateFormatter = DateFormatter()
         let minuteFormatter: DateFormatter = DateFormatter()
+        let dayFormatter: DateFormatter = DateFormatter()
+        let monthFormatter: DateFormatter = DateFormatter()
+        let yearFormatter: DateFormatter = DateFormatter()
         
         // Set date format
-        dateFormatter.dateFormat = "hh:mm a"
+        dateFormatter.dateFormat = "dd/MM/YYYY hh:mm a"
         dateFormatter.timeZone = NSTimeZone(name: "UTC+1") as TimeZone!
         
         hourFormatter.dateFormat = "hh"
-        hourFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        hourFormatter.timeZone = NSTimeZone(name: "UTC+1") as TimeZone!
         
         minuteFormatter.dateFormat = "mm"
-        minuteFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        minuteFormatter.timeZone = NSTimeZone(name: "UTC+1") as TimeZone!
         
+        dayFormatter.dateFormat = "dd"
+        dayFormatter.timeZone = NSTimeZone(name: "UTC+1") as TimeZone!
+        
+        monthFormatter.dateFormat = "MM"
+        monthFormatter.timeZone = NSTimeZone(name: "UTC+1") as TimeZone!
+        
+        yearFormatter.dateFormat = "YYYY"
+        yearFormatter.timeZone = NSTimeZone(name: "UTC+1") as TimeZone!
         
         // Apply date format
         selectedDate = dateFormatter.string(from: sender.date)
         hourSelected = Int(hourFormatter.string(from: sender.date))!
         minuteSelected = Int(minuteFormatter.string(from: sender.date))!
         
+        daySelected = Int(dayFormatter.string(from: sender.date))!
+        monthSelected = Int(monthFormatter.string(from: sender.date))!
+        yearSelected = Int(yearFormatter.string(from: sender.date))!
+        
         print("Selected value \(selectedDate)")
         print("Selected value \(hourSelected)")
         print("Selected value \(minuteSelected)")
+        print("Selected value \(yearSelected)")
+        print("Selected value \(monthSelected)")
+        print("Selected value \(daySelected)")
         
     }
     override func viewDidLoad() {
