@@ -28,6 +28,8 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let context = appDelegate.persistentContainer.viewContext
         
         let request : NSFetchRequest<Rdv> = Rdv.fetchRequest()
+        /*let current = (Calendar.current as NSCalendar).date(byAdding: .day, value: 0, to: Date(), options: [])! as NSDate*/
+        /*request.predicate = NSPredicate(format: "date > %@", NSDate())*/
         request.sortDescriptors = [NSSortDescriptor(key: ("date"), ascending: true)]
         do{
             try self.rdv = context.fetch(request)
@@ -44,7 +46,12 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     @IBAction func unwindToRdv(sender: UIStoryboardSegue){
-        }
+        if let controller = sender.source as? AjoutRdvViewController{
+            if controller.rdv != nil{
+                    Rdv.save()
+                }
+            }
+    }
     
     // MARK: - Table view data source
     

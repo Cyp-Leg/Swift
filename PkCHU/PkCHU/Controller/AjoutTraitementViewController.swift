@@ -82,9 +82,8 @@ class AjoutTraitementViewController: UIViewController, UNUserNotificationCenterD
         let notificationContent = UNMutableNotificationContent()
         
         // Configure le contenu de la notif
-        DispatchQueue.main.async {
-            notificationContent.title = "C'est l'heure de votre médicament"
-        }
+      
+        notificationContent.title = "C'est l'heure de votre médicament"
         notificationContent.subtitle = self.selectedDate
         notificationContent.body = " Medicament : " + (self.medicamentSelected?.nom)!
         notificationContent.sound = UNNotificationSound.default()

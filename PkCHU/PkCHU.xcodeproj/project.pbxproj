@@ -61,6 +61,7 @@
 		474C7AF0206936A600F6DA4C /* TraitementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C7AEF206936A600F6DA4C /* TraitementTableViewCell.swift */; };
 		474E14092068001C00A5DEA6 /* ListeMedecinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E14082068001C00A5DEA6 /* ListeMedecinsViewController.swift */; };
 		474E140B2068017500A5DEA6 /* MedecinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E140A2068017500A5DEA6 /* MedecinTableViewCell.swift */; };
+		47946997206AAFF4006D676F /* InfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47946996206AAFF4006D676F /* InfosViewController.swift */; };
 		87C5C76E20506275006BDABA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5C76D20506275006BDABA /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +143,7 @@
 		474C7AEF206936A600F6DA4C /* TraitementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitementTableViewCell.swift; sourceTree = "<group>"; };
 		474E14082068001C00A5DEA6 /* ListeMedecinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeMedecinsViewController.swift; sourceTree = "<group>"; };
 		474E140A2068017500A5DEA6 /* MedecinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecinTableViewCell.swift; sourceTree = "<group>"; };
+		47946996206AAFF4006D676F /* InfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosViewController.swift; sourceTree = "<group>"; };
 		87C5C76D20506275006BDABA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -281,6 +283,7 @@
 				474E140A2068017500A5DEA6 /* MedecinTableViewCell.swift */,
 				474C7AEF206936A600F6DA4C /* TraitementTableViewCell.swift */,
 				3D18F5EF206996FA0090C9A4 /* ValidActiviteViewController.swift */,
+				47946996206AAFF4006D676F /* InfosViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				3D4F99042046A96800307C66 /* PkCHU.xcdatamodeld in Sources */,
 				3DAE825B20613E310057936E /* AjoutEventViewController.swift in Sources */,
 				474E140B2068017500A5DEA6 /* MedecinTableViewCell.swift in Sources */,
+				47946997206AAFF4006D676F /* InfosViewController.swift in Sources */,
 				87C5C76E20506275006BDABA /* HomeViewController.swift in Sources */,
 				3D5D20F3205EBA5D005FEA27 /* OrdonnanceViewController.swift in Sources */,
 				3D49CEA32062CD6F00C20C99 /* DateExt.swift in Sources */,

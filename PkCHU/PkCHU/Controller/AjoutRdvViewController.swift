@@ -30,10 +30,12 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBAction func addRdv(_ sender: Any) {
         // ajout dao
-      /*  if (libelleTextField.text != nil) {
+        if (libelleTextField.text != nil) {
             rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, preparation: "", professionnel: professionnel!)
             performSegue(withIdentifier: "validRdv", sender: self)
-        } */
+        }
+        
+        
         
         // Verifie les autorisations de notification
         UNUserNotificationCenter.current().getNotificationSettings { (notificationSettings) in

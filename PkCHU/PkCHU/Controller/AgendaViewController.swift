@@ -27,6 +27,8 @@ class AgendaViewController: UIViewController {
         let context = appDelegate.persistentContainer.viewContext
         
         let request : NSFetchRequest<Rdv> = Rdv.fetchRequest()
+        let current = (Calendar.current as NSCalendar).date(byAdding: .day, value: 0, to: Date(), options: [])! as NSDate
+        request.predicate = NSPredicate(format: "date > %@", current)
         request.sortDescriptors = [NSSortDescriptor(key: ("date"), ascending: true)]
         do{
             try self.rdv = context.fetch(request)
