@@ -37,7 +37,7 @@ class AgendaViewController: UIViewController {
 
         if(rdv.count > 0)
         {
-            self.drLabel.text = rdv[0].concerner!.nom! + rdv[0].concerner!.prenom!
+            self.drLabel.text = rdv[0].concerner!.prenom! + "  " + rdv[0].concerner!.nom!
             self.speLabel.text = rdv[0].concerner?.posseder?.libelle
             self.dateLabel.text = (rdv[0].date! as Date).format()
         }
