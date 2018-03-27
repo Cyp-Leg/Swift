@@ -54,7 +54,7 @@ class AjoutProfessionnelViewController: UIViewController, UIPickerViewDelegate, 
     
 
     @IBAction func addProfessionnel(_ sender: Any) {
-        if (nomLabel.text != nil && prenomLabel.text != nil && adresseLabel != nil) {
+        if (nomLabel.text != nil && prenomLabel.text != nil && adresseLabel != nil && self.specialite != nil) {
             professionnel = ProfessionnelModel(nom: nomLabel.text!, prenom: prenomLabel.text!, adresseCabinet: adresseLabel.text!, specialite: self.specialite!)
             performSegue(withIdentifier: "validProf", sender: self)
         }

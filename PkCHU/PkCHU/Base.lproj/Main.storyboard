@@ -1823,7 +1823,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0v-Ez-dKk">
-                                <rect key="frame" x="16" y="565" width="343" height="49"/>
+                                <rect key="frame" x="16" y="602" width="343" height="49"/>
                                 <color key="backgroundColor" red="0.6846576244" green="0.81949011329999999" blue="0.9381274288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="eFi-q7-FJE"/>
@@ -1920,7 +1920,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.98783558010000005" blue="0.71727247640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="AFw-c3-cMZ" firstAttribute="bottom" secondItem="K0v-Ez-dKk" secondAttribute="bottom" constant="53" id="BOw-5W-X5u"/>
+                            <constraint firstItem="AFw-c3-cMZ" firstAttribute="bottom" secondItem="K0v-Ez-dKk" secondAttribute="bottom" constant="16" id="BOw-5W-X5u"/>
                             <constraint firstItem="AFw-c3-cMZ" firstAttribute="trailing" secondItem="HbQ-cU-TA8" secondAttribute="trailing" constant="16" id="CuR-P6-jOZ"/>
                             <constraint firstItem="AFw-c3-cMZ" firstAttribute="trailing" secondItem="gor-5O-xMZ" secondAttribute="trailing" constant="16" id="GB7-nb-BV8"/>
                             <constraint firstItem="RME-5D-seU" firstAttribute="leading" secondItem="AFw-c3-cMZ" secondAttribute="leading" constant="16" id="JAY-SX-i0c"/>
@@ -2278,12 +2278,11 @@
         <image name="Cup-gold-icon.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FcR-YO-5oT"/>
-        <segue reference="smM-ZE-kre"/>
+        <segue reference="TWM-cV-cmG"/>
         <segue reference="hnU-B5-Sb6"/>
         <segue reference="5Xh-qF-tqu"/>
         <segue reference="g2E-OP-b67"/>
         <segue reference="rDG-Gd-Fuv"/>
-        <segue reference="yie-rg-VPb"/>
+        <segue reference="hmb-o1-8u3"/>
     </inferredMetricsTieBreakers>
 </document>

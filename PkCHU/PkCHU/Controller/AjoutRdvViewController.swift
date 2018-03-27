@@ -19,6 +19,7 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBOutlet weak var libelleTextField: UITextField!
     
+    var preparation: String?
     var rdv: RdvModel?
     
     var professionnels: [Professionnel] = []
@@ -61,10 +62,25 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     @IBAction func addRdv(_ sender: Any) {
-        if (libelleTextField.text != nil) {
-            rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, professionnel: professionnel!)
-            performSegue(withIdentifier: "validRdv", sender: self)
+        let alert = UIAlertController(title: "Temps de préparation", message: "Entrez le temps de préparation nécessaire (en min)",preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Valider", style: .default)
+        {
+            [unowned self] action in
+            guard let textField = alert.textFields?.first, let preparationField = textField.text else {
+                return
+            }
+            self.preparation = preparationField
+                self.rdv = RdvModel(date: self.dateRdv! as NSDate, libelle: self.libelleTextField.text!, preparation: self.preparation!, professionnel: self.professionnel!)
+                self.performSegue(withIdentifier: "validRdv", sender: self)
         }
+        let cancelAction = UIAlertAction(title: "Annuler", style: .default)
+        alert.addTextField()
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true)
+        
     }
     
     @IBAction func unwindToAddRdv(sender: UIStoryboardSegue){

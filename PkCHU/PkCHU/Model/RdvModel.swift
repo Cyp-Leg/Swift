@@ -31,6 +31,15 @@ class RdvModel{
         }
     }
     
+    var preparation: String {
+        get{
+            return self.dao.preparation!
+        }
+        set{
+            self.dao.preparation = newValue
+        }
+    }
+    
     
     private var professionnelModel : Professionnel
     
@@ -40,11 +49,12 @@ class RdvModel{
         }
     }
     
-    init(date : NSDate, libelle : String, professionnel: Professionnel){
+    init(date : NSDate, libelle : String, preparation: String, professionnel: Professionnel){
         self.dao = Rdv.create()
         self.dao.date=date
         self.dao.libelle=libelle
         self.professionnelModel = professionnel
         self.dao.concerner = professionnel
+        self.dao.preparation = preparation
     }
 }
