@@ -23,7 +23,6 @@
 		3D06F263206064C400E50E9E /* RdvModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F262206064C400E50E9E /* RdvModel.swift */; };
 		3D06F2652060654300E50E9E /* SpecialiteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F2642060654300E50E9E /* SpecialiteModel.swift */; };
 		3D06F2672060659A00E50E9E /* SpecialiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06F2662060659A00E50E9E /* SpecialiteDAO.swift */; };
-		3D18F5EE2069936B0090C9A4 /* Cup-gold-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D18F5ED2069936B0090C9A4 /* Cup-gold-icon.png */; };
 		3D18F5F0206996FA0090C9A4 /* ValidActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18F5EF206996FA0090C9A4 /* ValidActiviteViewController.swift */; };
 		3D2884562056E2D000302567 /* PilulierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2884552056E2D000302567 /* PilulierViewController.swift */; };
 		3D28845C2056E5EA00302567 /* ActiviteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D28845B2056E5EA00302567 /* ActiviteModel.swift */; };
@@ -99,7 +98,6 @@
 		3D06F262206064C400E50E9E /* RdvModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RdvModel.swift; sourceTree = "<group>"; };
 		3D06F2642060654300E50E9E /* SpecialiteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialiteModel.swift; sourceTree = "<group>"; };
 		3D06F2662060659A00E50E9E /* SpecialiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialiteDAO.swift; sourceTree = "<group>"; };
-		3D18F5ED2069936B0090C9A4 /* Cup-gold-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cup-gold-icon.png"; sourceTree = SOURCE_ROOT; };
 		3D18F5EF206996FA0090C9A4 /* ValidActiviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidActiviteViewController.swift; sourceTree = "<group>"; };
 		3D2884552056E2D000302567 /* PilulierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilulierViewController.swift; sourceTree = "<group>"; };
 		3D28845B2056E5EA00302567 /* ActiviteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActiviteModel.swift; path = PkCHU/ActiviteModel.swift; sourceTree = SOURCE_ROOT; };
@@ -203,7 +201,6 @@
 				3D4F99052046A96800307C66 /* Assets.xcassets */,
 				3D4F99072046A96800307C66 /* LaunchScreen.storyboard */,
 				3D4F990A2046A96800307C66 /* Info.plist */,
-				3D18F5ED2069936B0090C9A4 /* Cup-gold-icon.png */,
 			);
 			path = PkCHU;
 			sourceTree = "<group>";
@@ -399,7 +396,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4F99092046A96800307C66 /* LaunchScreen.storyboard in Resources */,
-				3D18F5EE2069936B0090C9A4 /* Cup-gold-icon.png in Resources */,
 				3D4F99062046A96800307C66 /* Assets.xcassets in Resources */,
 				3D4F99012046A96700307C66 /* Main.storyboard in Resources */,
 			);

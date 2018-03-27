@@ -912,10 +912,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cup-gold-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="LcW-al-wIY">
-                                <rect key="frame" x="16" y="132" width="343" height="358"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Félicitations ! Vous avez atteint votre objectif, continuez comme ça !" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Ox-uM-LCc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Félicitations ! Vous avez atteint votre objectif, continuez comme ça !" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Ox-uM-LCc">
                                 <rect key="frame" x="16" y="498" width="343" height="67"/>
                                 <color key="backgroundColor" red="1" green="0.98783558010000005" blue="0.71727247640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -942,13 +939,8 @@
                             <constraint firstItem="I7i-DZ-8Q3" firstAttribute="trailing" secondItem="e2W-rZ-T9Z" secondAttribute="trailing" constant="16" id="DZ3-Ro-H80"/>
                             <constraint firstItem="e2W-rZ-T9Z" firstAttribute="leading" secondItem="I7i-DZ-8Q3" secondAttribute="leading" constant="16" id="HMN-aA-LWP"/>
                             <constraint firstItem="9Ox-uM-LCc" firstAttribute="leading" secondItem="I7i-DZ-8Q3" secondAttribute="leading" constant="16" id="IuZ-OO-dl3"/>
-                            <constraint firstItem="I7i-DZ-8Q3" firstAttribute="bottom" secondItem="LcW-al-wIY" secondAttribute="bottom" constant="177" id="OTI-1Z-Ma0"/>
-                            <constraint firstItem="LcW-al-wIY" firstAttribute="top" secondItem="e2W-rZ-T9Z" secondAttribute="bottom" constant="63" id="Qu8-Fy-raH"/>
-                            <constraint firstItem="I7i-DZ-8Q3" firstAttribute="trailing" secondItem="LcW-al-wIY" secondAttribute="trailing" constant="16" id="dNS-cg-WYk"/>
-                            <constraint firstItem="LcW-al-wIY" firstAttribute="leading" secondItem="I7i-DZ-8Q3" secondAttribute="leading" constant="16" id="oyX-I8-1uR"/>
                             <constraint firstItem="e2W-rZ-T9Z" firstAttribute="top" secondItem="I7i-DZ-8Q3" secondAttribute="top" id="rx1-x9-2VB"/>
                             <constraint firstItem="I7i-DZ-8Q3" firstAttribute="trailing" secondItem="9Ox-uM-LCc" secondAttribute="trailing" constant="16" id="uy4-yu-90R"/>
-                            <constraint firstItem="9Ox-uM-LCc" firstAttribute="top" secondItem="LcW-al-wIY" secondAttribute="bottom" constant="8" id="z7S-np-CML"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I7i-DZ-8Q3"/>
                     </view>
@@ -1394,7 +1386,7 @@
                                         <rect key="frame" x="0.0" y="28" width="348" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VAj-Qo-9fB" id="4yz-xX-SoL">
-                                            <rect key="frame" x="0.0" y="0.0" width="348" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nomMedoc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riA-nA-hdd">
@@ -2274,11 +2266,7 @@
             <point key="canvasLocation" x="-401" y="117"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Cup-gold-icon.png" width="512" height="512"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TWM-cV-cmG"/>
         <segue reference="hnU-B5-Sb6"/>
         <segue reference="5Xh-qF-tqu"/>
         <segue reference="g2E-OP-b67"/>

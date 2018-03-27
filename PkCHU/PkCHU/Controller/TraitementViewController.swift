@@ -20,7 +20,6 @@ class TraitementViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             /*            self.alertError(errorMsg: "Could not load data", UserInfo: "Unknown reason")
              */    return
@@ -90,17 +89,24 @@ class TraitementViewController: UIViewController, UITableViewDataSource, UITable
      }
      */
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    // Override to support editing the table view.
+      func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        tableTraitement.beginUpdates()
+        
      if editingStyle == .delete {
      // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
+    // traitement.delete(priseToDelete: (traitement?.get(i: indexPath.row)!)!)
+        
+        Prise.delete(object: self.traitement[indexPath.row])
+        Prise.save()
+     tableTraitement.deleteRows(at: [indexPath], with: .fade)
      } else if editingStyle == .insert {
      // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
      }
+        tableTraitement.endUpdates()
+        
      }
-     */
+    
     
     /*
      // Override to support rearranging the table view.

@@ -30,4 +30,12 @@ extension Prise{
     static func create() -> Prise{
         return Prise(context: CoreDataManager.context)
     }
+    
+    static func delete(object: Prise){
+        do{
+            try CoreDataManager.delete(object: object)
+        }catch let error as NSError{
+            fatalError("cannot save data: "+error.description)
+        }
+    }
 }

@@ -31,15 +31,15 @@ class RdvModel{
         }
     }
     
-    var preparation: String {
+   /* var preparation: String {
         get{
-            return self.dao.preparation!
+       //     return self.dao.preparation!
         }
         set{
-            self.dao.preparation = newValue
+     //       self.dao.preparation = newValue
         }
     }
-    
+    */
     
     private var professionnelModel : Professionnel
     
@@ -55,6 +55,6 @@ class RdvModel{
         self.dao.libelle=libelle
         self.professionnelModel = professionnel
         self.dao.concerner = professionnel
-        self.dao.preparation = preparation
+     //   self.dao.preparation = preparation
     }
 }
