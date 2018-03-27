@@ -36,7 +36,8 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBAction func addRdv(_ sender: Any) {
          //ajout dao
          if (libelleTextField.text != nil && preparation.text != nil ) {
-            rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, preparation: self.preparation.text!, professionnel: professionnel!)
+            let prepTime = Int16(preparation.text!)
+            rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, preparation: prepTime!, professionnel: professionnel!)
             performSegue(withIdentifier: "validRdv", sender: self)
             }
          else {

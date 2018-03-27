@@ -172,6 +172,10 @@ class AjoutTraitementViewController: UIViewController, UNUserNotificationCenterD
             fatalError("cannot reach data: "+error.description)
             
         }
+        if(medicaments.count>0)
+        {
+            medicamentSelected=medicaments[0]
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -10,12 +10,21 @@ import UIKit
 
 class PilulierViewController: UIViewController {
 
+    @IBOutlet weak var nomMedLabel: UILabel!
+    
+    @IBOutlet weak var doseMedLabel: UILabel!
+    
+    @IBOutlet weak var heureLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

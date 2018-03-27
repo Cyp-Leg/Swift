@@ -71,7 +71,7 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
         cell.nomLabel.text = self.rdv[indexPath.row].concerner!.nom
         if(self.rdv[indexPath.row].preparation != nil)
         {
-            cell.motifLabel.text = self.rdv[indexPath.row].preparation!
+            cell.motifLabel.text = String(self.rdv[indexPath.row].preparation)
         }
         else{
             cell.motifLabel.text = "Aucune préparation"

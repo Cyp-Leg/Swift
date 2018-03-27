@@ -31,9 +31,9 @@ class RdvModel{
         }
     }
     
-    var preparation: String {
+    var preparation: Int16 {
         get{
-            return self.dao.preparation!
+            return self.dao.preparation
         }
         set{
             self.dao.preparation = newValue
@@ -48,7 +48,7 @@ class RdvModel{
         }
     }
     
-    init(date : NSDate, libelle : String, preparation: String, professionnel: Professionnel){
+    init(date : NSDate, libelle : String, preparation: Int16, professionnel: Professionnel){
         self.dao = Rdv.create()
         self.dao.date=date
         self.dao.libelle=libelle
