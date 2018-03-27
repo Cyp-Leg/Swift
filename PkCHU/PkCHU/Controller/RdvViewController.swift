@@ -69,7 +69,7 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let date = self.rdv[indexPath.row].date! as Date
         cell.dateLabel.text = date.format()
         cell.nomLabel.text = self.rdv[indexPath.row].concerner!.nom
-        cell.motifLabel.text = self.rdv[indexPath.row].libelle!
+        cell.motifLabel.text = self.rdv[indexPath.row].preparation!
     //    cell.motifLabel.text = self.rdv[indexPath.row].preparation
         return cell
     }

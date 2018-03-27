@@ -30,12 +30,35 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var yearSelected : Int = 0
     var dateRdv: Date!
     
+    var preparation: String?
+    
     
     @IBAction func addRdv(_ sender: Any) {
          //ajout dao
          if (libelleTextField.text != nil) {
-         rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, preparation: "", professionnel: professionnel!)
-         performSegue(withIdentifier: "validRdv", sender: self)
+            let alert = UIAlertController(title: "Temps de préparation", message: "Entrez votre temps de préparation nécessaire (en min)",preferredStyle: .alert)
+            if(self.preparation == nil){
+                let saveAction = UIAlertAction(title: "Valider", style: .default)
+                {
+                    [unowned self] action in
+                    guard let textField = alert.textFields?.first, let prepaTime = textField.text else {
+                        return
+                    }
+                    self.preparation = prepaTime
+                    print(self.preparation!)
+                }
+            
+                let cancelAction = UIAlertAction(title: "Annuler", style: .default)
+                alert.addTextField()
+                alert.addAction(saveAction)
+                alert.addAction(cancelAction)
+            
+                present(alert, animated: true)
+            }
+            else {
+                rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, preparation: self.preparation!, professionnel: professionnel!)
+                performSegue(withIdentifier: "validRdv", sender: self)
+            }
          }
         
         // Verifie les autorisations de notification
@@ -55,6 +78,7 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 print("Application Not Allowed to Display Notifications")
             }
         }
+       
         
     }
     
