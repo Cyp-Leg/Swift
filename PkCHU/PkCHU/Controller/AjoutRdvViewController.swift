@@ -23,6 +23,8 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var professionnels: [Professionnel] = []
     var professionnel: Professionnel?
     var selectedDate : String = ""
+    var hourSelected : Int = 0
+    var minuteSelected : Int = 0
     var dateRdv: Date!
     
     
@@ -103,15 +105,28 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         // Create date formatter
         let dateFormatter: DateFormatter = DateFormatter()
+        let hourFormatter: DateFormatter = DateFormatter()
+        let minuteFormatter: DateFormatter = DateFormatter()
         
         // Set date format
-        dateFormatter.dateFormat = "dd/MM/YYYY hh:mm "
+        dateFormatter.dateFormat = "hh:mm a"
         dateFormatter.timeZone = NSTimeZone(name: "UTC+1") as TimeZone!
+        
+        hourFormatter.dateFormat = "hh"
+        hourFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        
+        minuteFormatter.dateFormat = "mm"
+        minuteFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        
         
         // Apply date format
         selectedDate = dateFormatter.string(from: sender.date)
+        hourSelected = Int(hourFormatter.string(from: sender.date))!
+        minuteSelected = Int(minuteFormatter.string(from: sender.date))!
         
         print("Selected value \(selectedDate)")
+        print("Selected value \(hourSelected)")
+        print("Selected value \(minuteSelected)")
         
     }
     override func viewDidLoad() {

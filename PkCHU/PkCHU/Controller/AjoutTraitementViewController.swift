@@ -20,6 +20,8 @@ class AjoutTraitementViewController: UIViewController, UNUserNotificationCenterD
     var medicaments: [Medicament] = []
     var medicamentSelected: Medicament?
     var selectedDate : String = ""
+    var hourSelected : Int = 0
+    var minuteSelected : Int = 0
     var prise: PriseModel?
     
     
@@ -88,6 +90,7 @@ class AjoutTraitementViewController: UIViewController, UNUserNotificationCenterD
         notificationContent.sound = UNNotificationSound.default()
         // Ajoute le trigger
         
+    
         let notificationTrigger = UNCalendarNotificationTrigger(dateMatching:  Calendar.current.dateComponents([.minute, .hour], from: self.hourPK.date), repeats: false)
         
         // Creer la requete de notification
@@ -111,15 +114,28 @@ class AjoutTraitementViewController: UIViewController, UNUserNotificationCenterD
         
         // Create date formatter
         let dateFormatter: DateFormatter = DateFormatter()
+        let hourFormatter: DateFormatter = DateFormatter()
+        let minuteFormatter: DateFormatter = DateFormatter()
         
         // Set date format
         dateFormatter.dateFormat = "hh:mm a"
         dateFormatter.timeZone = NSTimeZone(name: "UTC+1") as TimeZone!
         
+        hourFormatter.dateFormat = "hh"
+        hourFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        
+        minuteFormatter.dateFormat = "mm"
+        minuteFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+    
+        
         // Apply date format
         selectedDate = dateFormatter.string(from: sender.date)
+        hourSelected = Int(hourFormatter.string(from: sender.date))!
+        minuteSelected = Int(minuteFormatter.string(from: sender.date))!
         
         print("Selected value \(selectedDate)")
+        print("Selected value \(hourSelected)")
+        print("Selected value \(minuteSelected)")
         
     }
     override func viewDidLoad() {
@@ -133,6 +149,8 @@ class AjoutTraitementViewController: UIViewController, UNUserNotificationCenterD
         // Connect data:
         self.medPK.delegate = self
         self.medPK.dataSource = self
+        
+       // medicamentSelected = medPK[0]
         
         // Add an event to call onDidChangeDate function when value is changed.
         hourPK.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)

@@ -81,29 +81,34 @@ class TraitementViewController: UIViewController, UITableViewDataSource, UITable
      }
      */
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+  
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
      // Return false if you do not want the specified item to be editable.
      return true
      }
-     */
+
     
     // Override to support editing the table view.
       func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        tableTraitement.beginUpdates()
+       
         
-     if editingStyle == .delete {
+     if (editingStyle == .delete) {
      // Delete the row from the data source
     // traitement.delete(priseToDelete: (traitement?.get(i: indexPath.row)!)!)
         
         Prise.delete(object: self.traitement[indexPath.row])
         Prise.save()
-     tableTraitement.deleteRows(at: [indexPath], with: .fade)
+        
+    
+        self.tableTraitement.reloadData();
+        
+       /* self.tableTraitement.beginUpdates()
+        self.tableTraitement.deleteRows(at: [indexPath], with: .automatic)
+        self.tableTraitement.endUpdates()*/
      } else if editingStyle == .insert {
      // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
      }
-        tableTraitement.endUpdates()
+    
         
      }
     
