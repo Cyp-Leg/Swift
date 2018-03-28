@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var rdvTab: UITableView!
     @IBAction func deleteRdv(_ sender: Any) {
     }
@@ -39,7 +39,7 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,9 +48,9 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBAction func unwindToRdv(sender: UIStoryboardSegue){
         if let controller = sender.source as? AjoutRdvViewController{
             if controller.rdv != nil{
-                    Rdv.save()
-                }
+                Rdv.save()
             }
+        }
     }
     
     // MARK: - Table view data source
@@ -69,16 +69,11 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let date = self.rdv[indexPath.row].date! as Date
         cell.dateLabel.text = date.format()
         cell.nomLabel.text = self.rdv[indexPath.row].concerner!.nom
-        if(self.rdv[indexPath.row].preparation != nil)
-        {
-            cell.motifLabel.text = String(self.rdv[indexPath.row].preparation)
-        }
-        else{
-            cell.motifLabel.text = "Aucune préparation"
-        }
+        cell.motifLabel.text = self.rdv[indexPath.row].concerner!.posseder!.libelle!
+        //cell.motifLabel.text = "Aucune préparation"
         return cell
     }
-
+    
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
@@ -90,31 +85,32 @@ class RdvViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if (editingStyle == .delete) {
-    // Delete the row from the data source
-    // traitement.delete(priseToDelete: (traitement?.get(i: indexPath.row)!)!)
-    
-    rdvTab.beginUpdates()
-    Rdv.delete(object: self.rdv[indexPath.row])
-    Rdv.save()
-    rdvTab.deleteRows(at: [indexPath], with: .fade)
-    self.rdv.remove(at: indexPath.row)
-    rdvTab.endUpdates()
-    
-        self.rdvTab.reloadData();
-    
-    /* self.tableTraitement.beginUpdates()
-     self.tableTraitement.deleteRows(at: [indexPath], with: .automatic)
-     self.tableTraitement.endUpdates()*/
+            // Delete the row from the data source
+            // traitement.delete(priseToDelete: (traitement?.get(i: indexPath.row)!)!)
+            
+            rdvTab.beginUpdates()
+            Rdv.delete(object: self.rdv[indexPath.row])
+            Rdv.save()
+            rdvTab.deleteRows(at: [indexPath], with: .fade)
+            self.rdv.remove(at: indexPath.row)
+            rdvTab.endUpdates()
+            
+            self.rdvTab.reloadData();
+            
+            /* self.tableTraitement.beginUpdates()
+             self.tableTraitement.deleteRows(at: [indexPath], with: .automatic)
+             self.tableTraitement.endUpdates()*/
         }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destinationViewController.
+         // Pass the selected object to the new view controller.
+         }
+         */
+        
     }
 }
+

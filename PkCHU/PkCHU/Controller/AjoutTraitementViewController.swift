@@ -94,7 +94,7 @@ class AjoutTraitementViewController: UIViewController, UNUserNotificationCenterD
         
         // Creer la requete de notification
         
-        let notificationRequest = UNNotificationRequest(identifier: "Rappel_Med", content: notificationContent, trigger: notificationTrigger)
+        let notificationRequest = UNNotificationRequest(identifier: "Rappel_Med" + self.selectedDate, content: notificationContent, trigger: notificationTrigger)
         
         // Ajout de la requete dans le User Notification Center
         

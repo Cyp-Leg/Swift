@@ -34,15 +34,15 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     
     @IBAction func addRdv(_ sender: Any) {
-         //ajout dao
-         if (libelleTextField.text != nil && preparation.text != nil ) {
+        //ajout dao
+        if (libelleTextField.text != nil && preparation.text != nil ) {
             let prepTime = Int16(preparation.text!)
             rdv = RdvModel(date: dateRdv! as NSDate, libelle: libelleTextField.text!, preparation: prepTime!, professionnel: professionnel!)
             performSegue(withIdentifier: "validRdv", sender: self)
-            }
-         else {
+        }
+        else {
             print(self.preparation)
-            }
+        }
         
         // Verifie les autorisations de notification
         UNUserNotificationCenter.current().getNotificationSettings { (notificationSettings) in
@@ -61,7 +61,7 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 print("Application Not Allowed to Display Notifications")
             }
         }
-       
+        
         
     }
     
@@ -97,16 +97,37 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         print("Selected value \(monthSelected)")
         print("Selected value \(daySelected)")
         
+        
         // Ajoute le trigger
-        dateComponents.weekday = self.daySelected
+        dateComponents.day = self.daySelected
         dateComponents.month = self.monthSelected
-        dateComponents.year = self.yearSelected
-        dateComponents.hour = self.hourSelected
+        dateComponents.year = 2018
+        let nbheures = Int(self.preparation.text!)!/60
+        print("Nb heures : \(nbheures)")
+        let nbmin = Int(self.preparation.text!)!%60
+        print("Nb min : \(nbmin)")
+        
+        dateComponents.hour = self.hourSelected - nbheures
+        
+        if( self.minuteSelected - nbmin < 0 )
+        {
+            self.minuteSelected = 60 + (self.minuteSelected - nbmin)
+            dateComponents.hour = dateComponents.hour! - 1
+        }
+        else {
+            self.minuteSelected = (self.minuteSelected - nbmin)
+        }
+        if(dateComponents.hour! < 0)
+        {
+            dateComponents.hour = 24 + dateComponents.hour!
+        }
         dateComponents.minute = self.minuteSelected
         
+        print("New hour : \(dateComponents.hour!)")
+        print("New minute : \(dateComponents.minute!)")
         
-        //  let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching:  Calendar.current.dateComponents([.month, .year, .day, .minute, .hour], from: self.datePicker.date), repeats: false)
+        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        /*let notificationTrigger = UNCalendarNotificationTrigger(dateMatching:  Calendar.current.dateComponents([.month, .year, .day, .minute, .hour], from: self.datePicker.date), repeats: false)*/
         
         // Creer la requete de notification
         
@@ -207,6 +228,10 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             
         }
         
+        if(professionnels.count>0){
+            professionnel=professionnels[0]
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -261,4 +286,3 @@ class AjoutRdvViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
      */
     
 }
-
