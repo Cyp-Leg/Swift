@@ -11,6 +11,7 @@ import UIKit
 class EventTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
+
     @IBOutlet weak var typeLabel: UILabel!
     
     override func awakeFromNib() {
